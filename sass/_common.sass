@@ -53,114 +53,40 @@ body
 	font-size: 12px 
 	line-height: 1.4
 
-
-// common blocks      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
++font("HelveticaNeue Bold", helveticaneuecyr-bold)
++font("HelveticaNeue Medium", helveticaneuecyr-medium)
++font("HelveticaNeue Roman", HelveticaNeueCyr-Reg)
++font("HelveticaNeue Light", helveticaneuecyr-light)
+
+//vars
+
+=bold
+	font-family: "HelveticaNeue Bold", Helvetica, sans-serif 
+=med
+	font-family: "HelveticaNeue Medium", Helvetica, sans-serif 
+=reg
+	font-family: "HelveticaNeue Roman", Helvetica, sans-serif 
+=light
+	font-family: "HelveticaNeue Light", Helvetica, sans-serif 
+=georgia
+	font-family: Georgia, sans-serif 
+//reset
+h1, h2, h3, h4, h5, h6, b, strong
+	font-weight: normal
+a
+	text-decoration: none
+h3
+	+bold
+	font-size: 32px
+	line-height: 1.2
+	+r(980)
+		font-size: 36px
+	+r(640)
+		font-size: 28px
+.arr-bot
+	background: none
+	border: none
+	+s(arr-bot)
+	display: block
+	margin: 0 auto 20px
+	+opacity(0.3)

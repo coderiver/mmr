@@ -1,1 +1,531 @@
-// Normally mainpage styles
+.out
+	min-width: 320px 
+	margin: 0 auto
+	overflow: hidden
+.inner
+	max-width: 940px
+	padding: 0 24px
+	margin: 0 auto  
+	+clr
+	position: relative
+	+r(980)
+		padding: 0 12px 
+.header
+	border-bottom: 2px solid #dddddd 
+	position: relative
+	.inner
+		max-width: 1400px
+		padding: 20px 24px 
+		+r(1360)
+			max-width: 940px
+		+r(980)		
+			padding: 0 80px 
+	.search
+		max-width: 492px
+		width: 53% 
+		padding: 28px 0 0
+		+r(980)
+			display: none
+.logo
+	width: 32%
+	max-width: 300px
+	height: 100px
+	+vertical
+	float: left
+	+r(980)
+		display: block
+		width: 100%
+		margin: 0 auto
+		float: none
+		height: 88px 
+	a
+		display: inline-block
+		vertical-align: middle
+		width: 100%
+		+r(980)
+			max-width: 180px
+		img
+			width: 100%
+.search
+	float: right
+	width: 100%
+	position: relative
+	padding: 20px 0 25px
+	+clr
+	+r(980)
+		padding: 20px 0 0 
+	&__inner
+		position: relative
+	&__input
+		width: 100%
+		padding: 11px 40px 9px 20px
+		+box
+		+reg
+		font-size: 16px
+		border: 1px solid #dddddd
+		+r(980)
+			padding: 18px 60px 15px 20px
+			font-size: 22px 
+		+r(640)
+			padding: 11px 40px 9px 20px
+			font-size: 16px
+		&:focus, &.is-active
+			border-color: #18c5fe
+	&__btn, .btn-search
+		position: absolute
+		top: 50%
+		right: 11px
+		margin-top: -9px
+		+svg(search, 18, 18)
+		+r(980)
+			+svg(search, 34, 34)
+			margin-top: -17px 
+		+r(640)
+			margin-top: -9px
+			+svg(search, 18, 18)
+	&__filter
+		font-size: 0
+		text-align: right
+		padding: 17px 0 0 
+		float: right
+		+r(980)
+			width: 100%
+			float: none
+			text-align: justify
+			padding: 17px 0 
+		&:after
+			content: "" 
+			width: 100%
+			display: none
+			+r(980)
+				display: inline-block
+		li
+			display: inline-block
+			vertical-align: top
+			margin: 0 0 0 10px 
+			+r(980)
+				margin: 0 
+			a
+				+med
+				font-size: 12px
+				color: #d1d1d1 
+				text-transform: uppercase
+				+r(980)
+					font-size: 22px
+				+r(640)
+					font-size: 12px
+				&:hover, &.is-active
+					color: #00baff 
+	&__date
+		float: left
+		font-size: 0
+		padding: 16px 0 0 
+		+r(980)
+			width: 100%
+			float: none
+			border-bottom: 1px solid #dddddd 
+			padding: 16px 0 
+		li
+			display: inline-block
+			vertical-align: top
+			margin: 0 20px 0 0
+			+r(980)
+				margin: 0 
+				width: 50%
+				text-align: center
+			a
+				display: inline-block
+				padding: 0 20px 0 0
+				position: relative 
+				+bold
+				font-size: 14px
+				line-height: 1
+				color: #8d8d8d 
+				+r(980)
+					font-size: 22px
+				+r(640)
+					font-size: 14px
+				&:before
+					content: "" 
+					position: absolute
+					top: 50%
+					right: 0
+					margin-top: -2px
+					+arr(8, 4, #666666, b)
+	&__block
+		border: 1px solid #ededed
+		margin-top: -1px
+		padding: 20px 18px 18px
+		display: none
+		&.is-active
+			display: block
+		+r(980)
+			margin-bottom: 25px
+	&__tags
+		padding: 18px 0 0 
+		li
+			display: inline-block
+			vertical-align: top
+			margin: 0 5px 0 0 
+			a
+				+reg
+				font-size: 16px
+				color: #8d8d8d
+				text-transform: uppercase
+				+r(980)
+					font-size: 22px
+				+r(640)
+					font-size: 12px
+				&:hover
+					color: #00baff
+					+bold 
+.btn-search
+	position: absolute
+	top: 50%
+	display: none
+	+r(980)
+		+svg(search, 34, 34)
+		margin-top: -17px 
+		display: block
+		right: 12px
+	+r(640)
+		margin-top: -9px
+		+svg(search, 18, 18)
+.btn-nav
+	float: right
+	margin: 37px 0 0 20px
+	background: none
+	border: none
+	cursor: pointer
+	position: relative
+	width: 28px
+	height: 24px 
+	display: none
+	+r(1360)
+		display: block
+	+r(980)
+		position: absolute
+		top: 50%
+		left: 12px
+		margin: -12px 0 0
+	i
+		position: absolute
+		top: 50%
+		left: 0
+		margin-top: -2px
+		width: 100%
+		height: 4px
+		background: #d1d1d1
+		&:before, &:after
+			content: "" 
+			position: absolute
+			width: 100%
+			height: 4px
+			background: #d1d1d1
+			left: 0
+		&:before
+			top: -10px
+		&:after
+			bottom: -10px
+.nav
+	float: right
+	font-size: 0
+	padding: 42px 0 0 30px
+	display: block
+	+r(1360)
+		display: none
+.nav__list
+	+transition(left 0.4s, right 0.4s)
+	+r(1360)
+		position: absolute
+		top: 100%
+		right: -210px
+		z-index: 10
+		background: rgba(0,0,0,.8) 
+		padding: 20px 
+		width: 210px
+		text-align: right
+		+box
+	+r(980)
+		right: auto
+		left: -210px
+		text-align: left
+	&.is-active
+		display: block
+		+r(1360)
+			right: 0
+		+r(980)
+			left: 0
+	li
+		display: inline-block
+		vertical-align: top
+		margin: 0 0 0 22px 
+		+r(1360)
+			display: block
+			margin: 0 0 10px
+	a
+		+bold
+		font-size: 14px
+		line-height: 1
+		color: #494949
+		+opacity(0.8)
+		text-transform: uppercase
+		+text-shadow(0.5px 0.9px 0 rgba(255, 255, 255, 0.7))
+		+r(1360)
+			color: #fff 
+			+text-shadow(none)
+		&:hover
+			+opacity(1)
+		 
+.sticker
+	max-width: 940px
+	margin: 0 auto
+	background: #f4f4f4
+	p
+		+reg
+		font-size: 14px
+		line-height: 1.3
+		color: #242424 
+		padding: 10px 20px 
+		+r(980)
+			padding: 10px 12px 
+			font-size: 18px
+		+r(640)
+			font-size: 14px
+			
+.tags
+	font-size: 0
+	margin-bottom: 20px
+	li
+		display: inline-block
+		vertical-align: top
+		margin: 0 10px 10px 0
+		a
+			padding: 9px 30px 8px 10px 
+			position: relative
+			+med
+			font-size: 17px
+			line-height: 1
+			color: #4e4e4e 
+			background: #f7fdff
+			border: 2px solid #18c5fe
+			+border-radius(2px) 
+			display: block
+			text-transform: uppercase
+			&:before
+				content: "" 
+				position: absolute
+				top: 10.5px
+				right: 10px
+				+s(t-close)
+				cursor: pointer
+				+opacity(0.8)
+.tabs
+	font-size: 0
+	margin: 0 -1px 
+	li
+		display: inline-block
+		vertical-align: top
+		width: 25%
+		padding: 0 1px 
+		+box
+		a
+			background: #ededed
+			border: 1px solid #ededed
+			display: block 
+			+reg
+			font-size: 24px
+			line-height: 1
+			color: #8d8d8d
+			padding: 13px 0 11px 0
+			text-transform: uppercase
+			text-align: center 
+			+r(640)
+				font-size: 14px
+			&.is-active
+				background: #00baff 
+				color: #fff 
+				
+.banner
+	+cover
+	background-repeat: no-repeat
+	min-height: 320px
+	position: relative
+	&:before
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: #000
+		+opacity(0.4)
+		content: ""  
+	&__inner
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		+r(980)
+			position: relative
+			padding: 20px 0 0 
+	&__info
+		max-width: 620px
+		margin: 0 auto
+		padding: 15px 24px 15px 
+		+r(980)
+			padding: 15px 12px 15px
+	h3, p
+		color: #fff 
+	h3
+		margin-bottom: 10px
+	p
+		+light
+		font-size: 18px
+		line-height: 1.2
+.posts	
+	background-image: -moz-linear-gradient(bottom, #FFF 0%, #FFF 12%, #FFF 14%, #F3F3F3 100%)
+	background-image: -o-linear-gradient(bottom, #FFF 0%, #FFF 12%, #FFF 14%, #F3F3F3 100%)
+	background-image: -webkit-linear-gradient(bottom, #FFF 0%, #FFF 12%, #FFF 14%, #F3F3F3 100%)
+	background-image: linear-gradient(to top, #FFF 0%, #FFF 12%, #FFF 14%, #F3F3F3 100%)
+	padding-bottom: 20px 		
+.post
+	border-bottom: 1px solid #dddddd 
+	&__inner
+		max-width: 622px
+		margin: 0 auto
+		padding: 17px 24px 10px 
+		+r(980)
+			padding: 20px 12px 20px
+	time
+		+reg
+		font-size: 18px
+		color: #949494
+		padding: 10px 0 7px 
+		display: block
+		+r(980)
+			font-size: 20px
+			+r(640)
+				font-size: 18px
+	p
+		+georgia
+		color: #494949
+		font-size: 20px
+		line-height: 1.3
+		+r(980)
+			font-size: 22px
+		+r(640)
+			font-size: 20px
+		a
+			color: #00C0FF
+		b
+			+bold
+			color: #000
+	&__info
+		padding-bottom: 13px 
+	&__bottom
+		padding: 25px 0 10px
+		+clr
+	.social
+		margin: 0 15px 0 0
+		float: left
+		padding: 10px 0 0 
+		+r(980)
+			margin: 0 15px 10px 0
+	.p-tags
+		display: inline-block
+		vertical-align: top
+		padding: 14px 0 0 
+		+r(980)
+			display: block
+			clear: both
+	.link
+		float: right
+		+r(980)
+			float: left
+		
+.social
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: top
+		margin-right: 5px
+	a
+		display: inline-block
+		vertical-align: top
+		&.is-fb
+			+svg(fb, 24, 24)
+			+r(980)
+				+svg(fb, 44, 44)
+			+r(640)
+				+svg(fb, 24, 24)
+		&.is-tw
+			+svg(tw, 24, 24)
+			+r(980)
+				+svg(tw, 44, 44)
+			+r(640)
+				+svg(tw, 24, 24)
+		&.is-in
+			+svg(in, 24, 24)
+			+r(980)
+				+svg(in, 44, 44)
+			+r(640)
+				+svg(in, 24, 24)
+		&.is-vk
+			+svg(vk, 24, 24)
+			+r(980)
+				+svg(vk, 44, 44)
+			+r(640)
+				+svg(vk, 24, 24)
+		&.is-ok
+			+s(ok)
+			+r(980)
+				+s(ok-2)
+			+r(640)
+				+s(ok)
+
+
+.p-tags
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: top
+		margin-right: 10px
+		a
+			+bold
+			font-size: 12px
+			color: #18c5fe
+			text-transform: uppercase 
+			+r(980)
+				font-size: 18px
+			+r(640)
+				font-size: 12px
+
+.link
+	+reg
+	font-size: 14px
+	color: #cfcfcf
+	border: 1px solid #dddddd
+	padding: 11px 10px 
+	width: 100%
+	max-width: 140px
+	+box 
+	display: inline-block
+	vertical-align: top
+	+r(980)
+		padding: 14px 12px
+		font-size: 22px
+		max-width: 286px 
+	+r(640)
+		padding: 11px 10px 
+		font-size: 14px
+		max-width: 140px 
+.video
+	width: 100%
+	height: 540px
+	max-width: 940px
+	margin: 0 auto
+	+r(980)
+		height: 400px
+	iframe
+		width: 100%
+		height: 100%
