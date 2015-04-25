@@ -92,4 +92,14 @@ head.ready(function() {
 		}
 		scrollTop = scrollNow;
 	});
+
+	//posts
+	
+	if(event.target.nodeName=='a'){ 
+	}
+	else {
+		$('.post__info p').on('click', function(event) {
+		$(this).parents('.post').find('.post__bottom').slideToggle('fast');
+	});
+	}
 });
