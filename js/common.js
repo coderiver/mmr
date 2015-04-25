@@ -95,11 +95,14 @@ head.ready(function() {
 
 	//posts
 	
-	if(event.target.nodeName=='a'){ 
-	}
-	else {
-		$('.post__info p').on('click', function(event) {
+
+	$('.post__info p').click(function(event){
+
+		if($(event.target).closest('a').length){
+	  
+		}
+		else{
 		$(this).parents('.post').find('.post__bottom').slideToggle('fast');
+		}
 	});
-	}
 });
