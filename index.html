@@ -13,28 +13,36 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<header class="header">
+	<header class="header js-header">
 		<div class="inner">
-			<button class="btn-nav js-nav-btn"><i></i></button>
 			<div class="logo">
-				<a href="#"><img src="img/logo.svg" alt=""></a>
+				<a href="#"><img src="img/logo.png" alt=""></a>
+			</div>
+			<div class="header__right">
+				<button class="btn-nav js-nav-btn"><i></i></button>
+				<nav class="nav">
+					<ul class="nav__list">
+						<li><a href="#">календарь событий</a></li>
+						<li><a href="#">о проекте</a></li>
+						<li><a href="#">контакты</a></li>
+						<li><a href="#">разное</a></li>
+					</ul>
+				</nav>	
+				<div class="search">
+					<div class="search__inner">
+						<input type="text" class="search__input" placeholder="У нас нет категорий. Используйте поиск и теги">
+						<button class="search__btn"></button>
+					</div>
+				</div>	
+				<button class="btn-search"></button>	
 			</div>			
-			<nav class="nav js-nav">
-				<ul class="nav__list js-nav-list">
-					<li><a href="#">календарь событий</a></li>
-					<li><a href="#">о проекте</a></li>
-					<li><a href="#">контакты</a></li>
-					<li><a href="#">разное</a></li>
-				</ul>
-			</nav>	
-			<div class="search">
-				<div class="search__inner">
-					<input type="text" class="search__input" placeholder="У нас нет категорий. Используйте поиск и теги">
-					<button class="search__btn"></button>
-				</div>
-			</div>	
-			<button class="btn-search"></button>	
 		</div>
+		<ul class="nav-mob js-nav">
+			<li><a href="#">календарь событий</a></li>
+			<li><a href="#">о проекте</a></li>
+			<li><a href="#">контакты</a></li>
+			<li><a href="#">разное</a></li>
+		</ul>
 	</header>
 	<main class="main">
 		<div class="inner">
@@ -74,7 +82,6 @@
 				<div class="search__block js-tab-block is-active" data-block="1">
 					<div class="search__inner">
 						<input type="text" class="search__input" placeholder="Введите тег для поискаs">
-						<button class="search__btn"></button>
 					</div>
 					<ul class="search__tags js-tags-links">
 						<li><a href="#">1Фото</a></li>
