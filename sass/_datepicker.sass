@@ -1,0 +1,71 @@
+.ui-datepicker
+	width: 328px
+	border: 1px solid #ededed
+	background: #fff
+	padding: 19px 20px 15px
+	+box
+	+box-shadow(0 0px 10px 0px rgba(0, 0, 0, 0.1))
+	+r(640)
+		width: 328px*0.8
+	&-header
+		position: relative
+		padding: 0 30px 
+		margin: 0 -20px 
+	&-prev, &-next
+		font-size: 0
+		position: absolute
+		top: 50%
+		margin-top: -11.5px
+		cursor: pointer
+	&-prev
+		+svg(date-left, 13, 23)
+		left: 13px
+	&-next
+		+svg(date-right, 13, 23)
+		right: 13px
+	&-title
+		select			
+			border: 1px solid #DDD
+			background: #fff 
+			+reg
+			font-size: 14px
+			color: #8d8d8d
+			padding: 10px 6px
+			-webkit-appearance: none
+			-moz-appearance: none
+			text-indent: 1px
+			text-overflow: ''
+			position: relative
+			background: url(../img/svg/arrow-select.svg) no-repeat 90% 50%
+			margin: 0 10px 
+			cursor: pointer
+			+r(640)
+				width: 80px
+	&-month
+		width: 106px
+	&-year
+		width: 116px
+	&-calendar
+		td, th
+			span, a
+				width: 40px
+				line-height: 40px
+				text-align: center
+				display: block
+				+r(640)
+					width: 40px*0.8
+					line-height: 40px*0.8  
+		thead
+			th
+				+reg
+				font-size: 10.46px
+				color: #5a5a5a 
+		tbody
+			td
+				a
+					color: #626262
+					font-size: 13.89px
+					+reg 
+					&:hover
+						background: #18c5fe
+						color: #fff  

@@ -94,10 +94,15 @@ h3 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 32px; 
 @media only screen and (max-width: 980px) { .search__date { width: 100%; float: none; border-bottom: 1px solid #dddddd; padding: 16px 0; } }
 .search__date li { display: inline-block; vertical-align: top; margin: 0 20px 0 0; }
 @media only screen and (max-width: 980px) { .search__date li { margin: 0; width: 50%; text-align: center; } }
-.search__date li a { display: inline-block; padding: 0 20px 0 0; position: relative; font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 14px; line-height: 1; color: #8d8d8d; }
-@media only screen and (max-width: 980px) { .search__date li a { font-size: 22px; } }
-@media only screen and (max-width: 640px) { .search__date li a { font-size: 12px; } }
-.search__date li a:before { content: ""; position: absolute; top: 50%; right: 0; margin-top: -2px; width: 0px; height: 0px; border-style: solid; border-width: 4px 4px 0 4px; border-color: #666666 transparent transparent transparent; }
+.search__date li span, .search__date li input { display: inline-block; font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 14px; line-height: 1; color: #8d8d8d; text-transform: uppercase; cursor: pointer; }
+@media only screen and (max-width: 980px) { .search__date li span, .search__date li input { font-size: 22px; } }
+@media only screen and (max-width: 640px) { .search__date li span, .search__date li input { font-size: 12px; } }
+.search__date li input { width: 70px; padding: 0 3px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+@media only screen and (max-width: 980px) { .search__date li input { width: 100px; } }
+@media only screen and (max-width: 640px) { .search__date li input { width: 60px; } }
+.search__date li label { padding: 0 10px 0 0; display: inline-block; position: relative; cursor: pointer; }
+.search__date li label:before { content: ""; position: absolute; top: 50%; right: 0; margin-top: -2px; width: 0px; height: 0px; border-style: solid; border-width: 4px 4px 0 4px; border-color: #666666 transparent transparent transparent; }
+.search__date li label input:focus + span { color: #18c5fe; }
 .search__block { border: 1px solid #ededed; margin-top: -1px; padding: 20px 18px 18px; display: none; }
 .search__block.is-active { display: block; }
 @media only screen and (max-width: 980px) { .search__block { margin-bottom: 15px; } }
@@ -181,7 +186,7 @@ h3 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 32px; 
 @media only screen and (max-width: 640px) { .post__bottom { padding: 12.5px 0 5px; } }
 .post .social { margin: 0 15px 0 0; float: left; padding: 8px 0 0; }
 @media only screen and (max-width: 980px) { .post .social { margin: 0 15px 10px 0; } }
-@media only screen and (max-width: 640px) { .post .social { padding: 6px 0 0; } }
+@media only screen and (max-width: 640px) { .post .social { padding: 5px 0 0; } }
 .post .p-tags { display: inline-block; vertical-align: top; padding: 14px 0 0; }
 @media only screen and (max-width: 980px) { .post .p-tags { display: block; clear: both; } }
 .post .link { float: right; }
@@ -212,7 +217,7 @@ h3 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 32px; 
 @media only screen and (max-width: 640px) { .p-tags li a { font-size: 11px; } }
 
 .link { font-family: "HelveticaNeue Roman", Helvetica, sans-serif; font-size: 14px; color: #cfcfcf; border: 1px solid #dddddd; padding: 11px 10px; width: 100%; max-width: 140px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; display: inline-block; vertical-align: top; background: white; }
-@media only screen and (max-width: 980px) { .link { padding: 14px 12px; font-size: 22px; max-width: 286px; } }
+@media only screen and (max-width: 980px) { .link { padding: 17px 12px 16px; font-size: 22px; max-width: 286px; } }
 @media only screen and (max-width: 640px) { .link { padding: 9px 8px; font-size: 12px; max-width: 130px; } }
 
 .video { width: 100%; height: 540px; max-width: 940px; margin: 0 auto; }
@@ -320,3 +325,18 @@ h3 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 32px; 
   .chosen-container-single .chosen-search input[type="text"] { background-image: url("chosen-sprite@2x.png") !important; background-size: 52px 37px !important; background-repeat: no-repeat !important; }
   .chosen-container-multi .chosen-choices .search-choice .search-choice-close { background-image: url("chosen-sprite@2x.png") !important; background-size: 52px 37px !important; background-repeat: no-repeat !important; }
   .chosen-container .chosen-results-scroll-down span, .chosen-container .chosen-results-scroll-up span { background-image: url("chosen-sprite@2x.png") !important; background-size: 52px 37px !important; background-repeat: no-repeat !important; } }
+.ui-datepicker { width: 328px; border: 1px solid #ededed; background: white; padding: 19px 20px 15px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1); box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.1); }
+@media only screen and (max-width: 640px) { .ui-datepicker { width: 262.4px; } }
+.ui-datepicker-header { position: relative; padding: 0 30px; margin: 0 -20px; }
+.ui-datepicker-prev, .ui-datepicker-next { font-size: 0; position: absolute; top: 50%; margin-top: -11.5px; cursor: pointer; }
+.ui-datepicker-prev { background: url("../img/svg/date-left.svg") no-repeat 0 0; -moz-background-size: 13px 23px; -o-background-size: 13px 23px; -webkit-background-size: 13px 23px; background-size: 13px 23px; width: 13px; height: 23px; display: inline-block; left: 13px; }
+.ui-datepicker-next { background: url("../img/svg/date-right.svg") no-repeat 0 0; -moz-background-size: 13px 23px; -o-background-size: 13px 23px; -webkit-background-size: 13px 23px; background-size: 13px 23px; width: 13px; height: 23px; display: inline-block; right: 13px; }
+.ui-datepicker-title select { border: 1px solid #dddddd; background: white; font-family: "HelveticaNeue Roman", Helvetica, sans-serif; font-size: 14px; color: #8d8d8d; padding: 10px 6px; -webkit-appearance: none; -moz-appearance: none; text-indent: 1px; text-overflow: ""; position: relative; background: url(../img/svg/arrow-select.svg) no-repeat 90% 50%; margin: 0 10px; cursor: pointer; }
+@media only screen and (max-width: 640px) { .ui-datepicker-title select { width: 80px; } }
+.ui-datepicker-month { width: 106px; }
+.ui-datepicker-year { width: 116px; }
+.ui-datepicker-calendar td span, .ui-datepicker-calendar td a, .ui-datepicker-calendar th span, .ui-datepicker-calendar th a { width: 40px; line-height: 40px; text-align: center; display: block; }
+@media only screen and (max-width: 640px) { .ui-datepicker-calendar td span, .ui-datepicker-calendar td a, .ui-datepicker-calendar th span, .ui-datepicker-calendar th a { width: 32px; line-height: 32px; } }
+.ui-datepicker-calendar thead th { font-family: "HelveticaNeue Roman", Helvetica, sans-serif; font-size: 10.46px; color: #5a5a5a; }
+.ui-datepicker-calendar tbody td a { color: #626262; font-size: 13.89px; font-family: "HelveticaNeue Roman", Helvetica, sans-serif; }
+.ui-datepicker-calendar tbody td a:hover { background: #18c5fe; color: white; }
