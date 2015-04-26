@@ -7,6 +7,19 @@
 		padding: 165px 0 0 
 	+r(640)
 		padding: 47px 0 0 
+	&_header
+		+r(980)
+			padding: 205px 0 0  
+		+r(640)
+			padding: 45px 0 0  
+		.header
+			+r(980)
+				height: 203px
+			+r(640)
+				height: 45px 
+		.search__filter
+			+r(980)	
+				padding-bottom: 0
 .inner
 	max-width: 940px
 	padding: 0 24px
@@ -396,6 +409,11 @@
 	position: relative
 	+r(640)
 		min-height: 220px 
+	&_big
+		min-height: 475px 
+		margin-bottom: 18px
+		+r(640)
+			min-height: 265px 
 	&:before
 		position: absolute
 		top: 0
@@ -495,7 +513,20 @@
 			clear: both
 	.link
 		float: right
-		
+	&__top
+		padding: 0 0 10px
+		position: relative
+		&:before
+			content: "" 
+			position: absolute
+			top: 0
+			right: 0
+			+arr(43, 43, #00c0ff, tr)
+		a
+			+bold
+			font-size: 20px
+			color: #00c0ff
+			text-transform: uppercase 
 .social
 	font-size: 0
 	li
@@ -578,6 +609,7 @@
 	height: 540px
 	max-width: 940px
 	margin: 0 auto
+	position: relative
 	+r(980)
 		height: 400px
 	+r(640)
@@ -585,7 +617,20 @@
 	iframe
 		width: 100%
 		height: 100%
-		
+.video-wrap
+	max-width: 940px
+	margin: 0 auto
+	position: relative
+	h2
+		position: absolute
+		bottom: 90px
+		left: 15px
+		color: #fff 
+		width: 70%
+		+r(640)
+			position: static
+			color: #494949 
+			padding: 12px 
 .nav-mob
 	display: none
 	position: absolute
@@ -624,3 +669,7 @@
 			+text-shadow(none)
 		&:hover
 			+opacity(1)
+
+.more
+	.arr-bot
+		margin: 0 auto
