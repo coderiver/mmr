@@ -92,7 +92,6 @@ head.ready(function() {
 		}
 		scrollTop = scrollNow;
 	});
-
 	//posts
 	
 

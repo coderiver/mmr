@@ -240,8 +240,8 @@ h3 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 32px; 
 .video iframe { width: 100%; height: 100%; }
 
 .video-wrap { max-width: 940px; margin: 0 auto; position: relative; }
-.video-wrap h2 { position: absolute; bottom: 90px; left: 15px; color: white; width: 70%; }
-@media only screen and (max-width: 640px) { .video-wrap h2 { position: static; color: #494949; padding: 12px; } }
+.video-wrap h3 { color: black; width: 80%; padding: 20px 0; }
+@media only screen and (max-width: 640px) { .video-wrap h3 { padding: 20px 12px; } }
 
 .nav-mob { display: none; position: absolute; top: 100%; right: 0; -moz-transition: left 0.4s, right 0.4s; -o-transition: left 0.4s, right 0.4s; -webkit-transition: left 0.4s, right 0.4s; transition: left 0.4s, right 0.4s; background: rgba(0, 0, 0, 0.8); padding: 20px; width: 210px; text-align: right; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; z-index: 100; }
 @media only screen and (max-width: 1360px) { .nav-mob { display: block; right: -210px; } }
