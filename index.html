@@ -8,6 +8,7 @@
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
 	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<link rel="stylesheet" media="all" href="css/jquery.datepick.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
@@ -30,8 +31,15 @@
 				</nav>	
 				<div class="search">
 					<div class="search__inner">
-						<input type="text" class="search__input" placeholder="У нас нет категорий. Используйте поиск и теги">
 						<button class="search__btn"></button>
+						<select data-placeholder="У нас нет категорий. Используйте поиск и теги" class="chosen-select" multiple style="width:100%;" tabindex="4">
+							<option value=""></option>
+							<option value="United States">United States</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="Afghanistan">Afghanistan</option>
+							<option value="Aland Islands">Aland Islands</option>
+							<option value="Albania">Albania</option>
+						</select>
 					</div>
 				</div>	
 				<button class="btn-search"></button>	
@@ -48,8 +56,12 @@
 		<div class="inner">
 			<div class="search">
 				<ul class="search__date">
-					<li><a href="#">ОТ 21.05.06</a></li>
-					<li><a href="#">ДО 21.06.10</a></li>
+					<li>
+						<span>от</span><input type="text" class="js-datepick">
+					</li>
+					<li>
+						<span>до</span><input type="text" class="js-datepick">
+					</li>
 				</ul>
 				<ul class="search__filter">
 					<li><a href="#">новости</a></li>
@@ -253,7 +265,7 @@
 							<li><a href="#" class="is-vk"></a></li>
 							<li><a href="#" class="is-ok"></a></li>
 						</ul>
-						<a href="#" class="link">mmr.ua/331743</a>
+						<input type="text" class="link" value="mmr.ua/331743">
 						<ul class="p-tags">
 							<li><a href="#">Newcastle</a></li>
 							<li><a href="#">Super bowl</a></li>
@@ -277,7 +289,7 @@
 							<li><a href="#" class="is-vk"></a></li>
 							<li><a href="#" class="is-ok"></a></li>
 						</ul>
-						<a href="#" class="link">mmr.ua/331743</a>
+						<input type="text" class="link" value="mmr.ua/331743">
 						<ul class="p-tags">
 							<li><a href="#">Newcastle</a></li>
 							<li><a href="#">Super bowl</a></li>
@@ -304,7 +316,7 @@
 							<li><a href="#" class="is-vk"></a></li>
 							<li><a href="#" class="is-ok"></a></li>
 						</ul>
-						<a href="#" class="link">mmr.ua/331743</a>
+						<input type="text" class="link" value="mmr.ua/331743">
 						<ul class="p-tags">
 							<li><a href="#">Newcastle</a></li>
 							<li><a href="#">Super bowl</a></li>
@@ -337,7 +349,7 @@
 							<li><a href="#" class="is-vk"></a></li>
 							<li><a href="#" class="is-ok"></a></li>
 						</ul>
-						<a href="#" class="link">mmr.ua/331743</a>
+						<input type="text" class="link" value="mmr.ua/331743">
 						<ul class="p-tags">
 							<li><a href="#">Newcastle</a></li>
 							<li><a href="#">Super bowl</a></li>
@@ -361,7 +373,7 @@
 							<li><a href="#" class="is-vk"></a></li>
 							<li><a href="#" class="is-ok"></a></li>
 						</ul>
-						<a href="#" class="link">mmr.ua/331743</a>
+						<input type="text" class="link" value="mmr.ua/331743">
 						<ul class="p-tags">
 							<li><a href="#">Newcastle</a></li>
 							<li><a href="#">Super bowl</a></li>
@@ -385,7 +397,7 @@
 							<li><a href="#" class="is-vk"></a></li>
 							<li><a href="#" class="is-ok"></a></li>
 						</ul>
-						<a href="#" class="link">mmr.ua/331743</a>
+						<input type="text" class="link" value="mmr.ua/331743">
 						<ul class="p-tags">
 							<li><a href="#">Newcastle</a></li>
 							<li><a href="#">Super bowl</a></li>
@@ -409,7 +421,7 @@
 							<li><a href="#" class="is-vk"></a></li>
 							<li><a href="#" class="is-ok"></a></li>
 						</ul>
-						<a href="#" class="link">mmr.ua/331743</a>
+						<input type="text" class="link" value="mmr.ua/331743">
 						<ul class="p-tags">
 							<li><a href="#">Newcastle</a></li>
 							<li><a href="#">Super bowl</a></li>
