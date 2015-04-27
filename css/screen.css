@@ -203,7 +203,9 @@ h3 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 32px; 
 .post .link { float: right; }
 .post__top { padding: 0 0 10px; position: relative; }
 .post__top:before { content: ""; position: absolute; top: 0; right: 0; width: 0px; height: 0px; border-style: solid; border-width: 0 43px 43px 0; border-color: transparent #00c0ff transparent transparent; }
+@media only screen and (max-width: 640px) { .post__top:before { width: 0px; height: 0px; border-style: solid; border-width: 0 21px 21px 0; border-color: transparent #00c0ff transparent transparent; } }
 .post__top a { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 20px; color: #00c0ff; text-transform: uppercase; }
+@media only screen and (max-width: 640px) { .post__top a { font-size: 10px; } }
 
 .social { font-size: 0; }
 .social li { display: inline-block; vertical-align: top; margin-right: 5px; }
