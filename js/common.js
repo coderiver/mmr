@@ -147,6 +147,39 @@ head.ready(function() {
 		infinite: true,
 		arrows: true,
 		dots: false,
-		adaptiveHeight: true
+		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 1110,
+				settings: {
+					// appendArrows: '.slider__btns'
+					arrows: false,
+					slidesToShow: 1.5,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+
+	//search drop
+	$('.js-search').each(function() {
+		$('.js-search-input').on('click', function () {	
+			if ($(this).parents('.js-search').find('.js-search-drop').hasClass('is-active')) {
+				$(this).parents('.js-search').find('.js-search-drop').removeClass('is-active');
+			}
+			else {
+				$(this).parents('.js-search').find('.js-search-drop').addClass('is-active');
+			};
+		});
+		$('.js-search').on('click', function() {
+			event.stopPropagation();
+		});
+		$('.js-search-drop li').on('click', function() {
+			$(this).parents('.js-search').find('.js-search-input').val($(this).text());
+			$('.js-search-drop').removeClass('is-active');
+		});
+	});
+	$('body').on('click', function(event) {		
+		$('.js-search-drop').removeClass('is-active');
 	});
 });

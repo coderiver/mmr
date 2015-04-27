@@ -251,6 +251,43 @@ body
 				&:hover
 					color: #00baff
 					+bold 
+	&__drop
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		background: #fff
+		display: none
+		border: 1px solid #cacaca
+		border-top: none
+		&.is-active
+			display: block
+		p
+			+bold
+			color: #a1b1b6 
+			padding: 0 20px 
+		p, li
+			font-size: 14.61px
+			margin-bottom: 1px
+			line-height: 25px
+		li
+			color: #636363 
+			+reg
+			padding: 0 25px
+			cursor: pointer
+			&:hover
+				background-color: #EBFAFF
+		ul
+			padding: 0 0 15px
+	&__heading
+		+bold
+		font-size: 13px
+		color: #a1b1b6
+		text-decoration: underline
+		display: block
+		padding: 5px 20px 
+		background: #ebfaff  
+		margin-bottom: 10px
 .btn-search
 	position: absolute
 	top: 50%
@@ -412,6 +449,7 @@ body
 	background-repeat: no-repeat
 	min-height: 320px
 	position: relative
+	display: block
 	+r(640)
 		min-height: 220px 
 	&_big
@@ -646,8 +684,10 @@ body
 	h2
 		color: #141414
 		padding: 20px 25px
+		width: 80%
 		+r(640)
 			padding: 20px 12px 
+			width: 90%
 .video-text
 	padding: 45px 27px
 	+r(640)
@@ -747,7 +787,7 @@ body
 			font-size: 11.5px
 			
 .share
-	padding: 35px 5px 20px
+	padding: 30px 5px 16px
 	max-width: 930px
 	margin: 0 auto
 	background: #f3f3f3 
@@ -756,6 +796,7 @@ body
 		font-size: 0
 		max-width: 462px
 		width: 100%
+		padding: 5px 0 4px 
 		li
 			display: inline-block
 			vertical-align: top
@@ -774,6 +815,9 @@ body
 		padding: 0 18px 12px
 		overflow: hidden
 		color: #242424
+		+r(980)
+			clear: both
+			padding: 0 12px 12px 
 		h5, p
 			display: inline 
 		h5
@@ -786,7 +830,45 @@ body
 			font-size: 21px
 			+r(640)
 				font-size: 10.5px
-			 
+		div
+			display: block
+			+clr
+			span
+				+bold
+				font-size: 18px
+				text-transform: uppercase
+				float: left
+				padding: 8px 19px 5px 0 
+				+r(640)
+					font-size: 9px
+					padding: 6px 10px 5px 0 
+			label
+				overflow: hidden
+				display: block
+				position: relative
+				&:before
+					content: "" 
+					position: absolute
+					top: 50%
+					left: 16px
+					margin-top: -11px
+					+svg(mail, 32, 22)
+					+r(640)
+						+svg(mail, 16, 11)
+						margin-top: -6px
+	&__input
+		background-color: #FFF
+		border: 1px solid #CACACA
+		color: #cacaca
+		+reg
+		font-size: 17px
+		padding: 10px 15px 9px 80px 
+		width: 100%
+		+box
+		+r(640)
+			padding: 6px 8px 5px 40px
+			font-size: 9px 
+			max-width: 300px
 .comment
 	padding: 35px 12px 40px
 	border-bottom: 1px solid #e9e9e9
@@ -927,17 +1009,11 @@ body
 				font-size: 9px
 
 .quote
-	font-size: 36px
-	line-height: 1.66
-	color: #2e2e2e
-	+med
-	max-width: 599px
 	text-align: center
 	margin: 0 auto 
 	padding: 20px 12px
 	+r(640)
 		padding: 20px 12px
-		font-size: 18px 
 	&:before
 		content: "" 
 		+svg(quote, 93, 67)
@@ -950,7 +1026,37 @@ body
 	blockquote
 		margin: 0
 		padding: 0
-		
+		display: inline-block
+		font-size: 36px
+		line-height: 1.66
+		color: #2e2e2e
+		+med
+		max-width: 599px
+		+r(640)
+			font-size: 18px 
+	&__author
+		text-align: center
+		padding: 30px 0
+		+r(640)
+			padding: 15px 0 
+		span
+			+georgia
+			font-style: italic
+			font-size: 24px
+			color: #2E2E2E
+			display: block
+			+r(640)
+				font-size: 12px
+	&__img
+		width: 169px
+		+border-radius(50%)
+		overflow: hidden
+		margin: 0 auto 40px
+		+r(640)
+			width: 85px
+			margin-bottom: 20px
+		img
+			width: 100%
 .text	
 	padding: 20px 0 25px
 	+r(640)
@@ -1005,3 +1111,67 @@ body
 		margin: 0 auto
 	.video-wrap
 		max-width: 960px
+		+r(1110)
+			padding-right: 5px
+			padding-right: 5px  
+			+box
+	&__btns
+		.slick-prev, .slick-next
+			position: static
+
+.slideshare
+	max-width: 960px
+	height: 800px
+	position: relative
+	margin: 0 auto 50px
+	+r(980)
+		height: 600px
+		margin-bottom: 40px 
+	+r(640)
+		height: 320px 
+		margin-bottom: 25px
+	iframe
+		width: 100%
+		height: 100%
+
+.hashtags
+	border-top: 2px solid #dddddd
+	padding: 30px 25px
+	+r(640)
+		padding: 20px 12px 
+	ul
+		max-width: 960px
+		margin: 0 auto
+		font-size: 0
+		padding: 2px 0 0 46px
+		position: relative
+		+box
+		+r(640)
+			padding: 0 0 0 23px 
+		&:before
+			content: "" 
+			+svg(hashtags, 24, 24)
+			position: absolute
+			top: 0
+			left: 0
+			+r(640)
+				+svg(hashtags, 12, 12)
+		li
+			display: inline-block
+			vertical-align: top
+			margin: 0 18px 18px
+			+r(640)
+				margin: 0 9px 9px
+			a
+				+reg
+				font-size: 22px
+				line-height: 1
+				color: #5b5b5b
+				text-transform: uppercase
+				+r(640)
+					font-size: 11px
+
+.banners
+	padding: 65px 0 0 
+	.banner
+		margin-top: 5px
