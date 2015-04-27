@@ -1,3 +1,7 @@
+body
+	&.is-big
+		.post__inner, .banner__info
+			max-width: 940px
 .out
 	min-width: 320px 
 	margin: 0 auto
@@ -8,6 +12,7 @@
 	+r(640)
 		padding: 47px 0 0 
 	&_header
+		padding: 132px 0 0 
 		+r(980)
 			padding: 205px 0 0  
 		+r(640)
@@ -475,17 +480,22 @@
 		color: #494949
 		font-size: 20px
 		line-height: 1.3
+		display: inline
 		+r(980)
 			font-size: 22px
 		+r(640)
 			font-size: 12px
 		a
 			color: #00C0FF
-		b
-			+bold
-			color: #000
+	b
+		font-size: 20px
+		line-height: 1.3
+		display: inline
+		+bold
+		color: #000
 	&__info
 		padding-bottom: 13px 
+		cursor: pointer
 		p
 			cursor: pointer
 		+r(640)
@@ -625,12 +635,31 @@
 	max-width: 940px
 	margin: 0 auto
 	position: relative
+	&_mb
+		margin-bottom: 40px
+		+r(640)
+			margin-bottom: 20px
 	h3
 		color: #000 
 		width: 80%
-		padding: 20px 0 
+		padding: 20px 12px 
+	h2
+		color: #141414
+		padding: 20px 25px
 		+r(640)
 			padding: 20px 12px 
+.video-text
+	padding: 45px 27px
+	+r(640)
+		padding: 25px 12px 
+	p
+		+reg
+		font-size: 23px
+		color: #323232
+		letter-spacing: -0.025em  
+		line-height: 1.2
+		+r(640)
+			font-size: 11.5px
 .nav-mob
 	display: none
 	position: absolute
@@ -673,3 +702,306 @@
 .more
 	.arr-bot
 		margin: 0 auto
+		
+.promo
+	position: relative
+	+cover
+	background-repeat: no-repeat
+	min-height: 320px
+	position: relative
+	+r(640)
+		min-height: 220px 
+	&_big
+		min-height: 475px 
+		margin-bottom: 18px
+		+r(640)
+			min-height: 265px 
+	&:before
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: #000
+		+opacity(0.4)
+		content: ""  
+	&__inner
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+	&__info
+		max-width: 940px
+		margin: 0 auto
+		padding: 15px 24px 25px 
+		color: #fff 
+		+r(980)
+			padding: 15px 12px 20px
+	h2
+		margin-bottom: 15px
+	p
+		+reg
+		font-size: 23px
+		line-height: 1.2
+		+r(640)
+			font-size: 11.5px
+			
+.share
+	padding: 35px 5px 20px
+	max-width: 930px
+	margin: 0 auto
+	background: #f3f3f3 
+	&__social
+		float: left
+		font-size: 0
+		max-width: 462px
+		width: 100%
+		li
+			display: inline-block
+			vertical-align: top
+			margin: 0 12px 12px
+		a
+			display: block
+			&.is-fb
+				+s(s-fb)
+			&.is-tw
+				+s(s-tw)
+			&.is-vk
+				+s(s-vk)
+			&.is-ok
+				+s(s-ok)
+	&__right
+		padding: 0 18px 12px
+		overflow: hidden
+		color: #242424
+		h5, p
+			display: inline 
+		h5
+			+bold
+			font-size: 18px
+			+r(640)
+				font-size: 9px
+		p
+			+reg
+			font-size: 21px
+			+r(640)
+				font-size: 10.5px
+			 
+.comment
+	padding: 35px 12px 40px
+	border-bottom: 1px solid #e9e9e9
+	+r(640)
+		padding: 20px 12px 20px 
+	&__inner
+		max-width: 940px
+		margin: 0 auto
+		+clr
+	.author
+		float: left
+		margin: 5px 20px 0 0 
+		+r(980)
+			margin: 0 20px*0.75 0 0 
+		+r(640)
+			float: none
+	&__text
+		overflow: hidden
+		p
+			+georgia
+			font-style: italic
+			font-size: 26px
+			line-height: 1.23
+			color: #969696 
+			+r(980)
+				font-size: 26px*0.75
+			+r(640)
+				font-size: 13px
+.author
+	width: 140px*0.75
+	+clr
+	+r(980)
+		width: 140px*0.75 
+	+r(640)
+		width: 100%
+	&__img
+		display: block
+		font-size: 0
+		margin-bottom: 14px
+		max-width: 140px
+		+r(640)
+			max-width: 70px
+			float: left
+		img
+			width: 100%
+	&__info
+		+r(640)
+			overflow: hidden
+			padding: 0 12px 
+		a
+			+georgia
+			font-style: italic
+			font-size: 18px
+			color: #00BAFF
+			+r(980)
+				font-size: 18px*0.75
+			+r(640)
+				font-size: 9px
+	&__title
+		+bold
+		color: #2E2E2E
+		font-size: 18px
+		text-transform: uppercase
+		display: block
+		+r(980)
+			font-size: 18px*0.75
+		+r(640)
+			font-size: 9px
+		
+.box
+	&__inner
+		+clr
+		max-width: 940px
+		margin: 0 auto
+		padding: 45px 0 15px 
+		+r(640)
+			padding: 25px 0 5px 
+	&__right
+		float: right
+		font-size: 0
+		width: 32% 
+		padding: 5px 0 0 
+		margin: 0 0 15px 10px 
+		text-align: center
+		+box
+		+r(640)
+			display: none
+		img
+			max-width: 100%
+	&__text
+		overflow: hidden
+		padding: 0 25px 
+		+r(640)
+			padding: 0 12px 
+		p, h4
+			font-size: 26px
+			+r(980)
+				font-size: 26px*0.75
+			+r(640)
+				font-size: 13px
+		h4
+			+bold
+			color: #000
+			line-height: 1.34
+			margin-bottom: 5px
+		p
+			+georgia
+			color: #494949
+			line-height: 1.35
+			margin-bottom: 55px
+			+r(640)
+				margin-bottom: 30px
+.image
+	font-size: 0
+	margin-bottom: 20px
+	img
+		width: 100%
+		display: block
+		margin: 0 auto 35px
+		max-width: 1280px
+		+r(640)
+			margin-bottom: 15px 
+	&__inner
+		max-width: 940px
+		margin: 0 auto
+		text-align: right
+		span
+			+georgia
+			font-style: italic
+			font-size: 18px
+			color: #767676 
+			display: inline-block
+			text-transform: uppercase
+			+r(980)
+				padding: 0 25px
+			+r(640)
+				padding: 0 12px 
+				font-size: 9px
+
+.quote
+	font-size: 36px
+	line-height: 1.66
+	color: #2e2e2e
+	+med
+	max-width: 599px
+	text-align: center
+	margin: 0 auto 
+	padding: 20px 12px
+	+r(640)
+		padding: 20px 12px
+		font-size: 18px 
+	&:before
+		content: "" 
+		+svg(quote, 93, 67)
+		display: block
+		margin: 0 auto 20px
+		+r(640)
+			+svg(quote, 46, 33)
+			margin: 0 auto 10px
+			display: block 
+	blockquote
+		margin: 0
+		padding: 0
+		
+.text	
+	padding: 20px 0 25px
+	+r(640)
+		padding: 20px 0 15px
+	&__inner
+		max-width: 940px
+		margin: 0 auto
+		padding: 0 25px 0
+		+r(640)
+			padding: 0 12px 0
+	&_mod
+		background: #f3f3f3
+		padding-bottom: 35px
+		+r(640)
+			padding-bottom: 25px
+	p, h4
+		font-size: 26px
+		max-width: 880px
+		+r(980)
+			font-size: 26px*0.75
+		+r(640)
+			font-size: 13px
+	h4
+		+bold
+		color: #000
+		line-height: 1.34
+		margin-bottom: 5px
+	p
+		+georgia
+		color: #494949
+		line-height: 1.35
+		b
+			+bold
+		a
+			color: #00c0ff 
+	time
+		+reg
+		font-size: 18px
+		color: #949494
+		padding: 10px 0 7px 
+		display: block
+		+r(980)
+			font-size: 20px
+		+r(640)
+			font-size: 9px
+
+.slider
+	margin: 50px 0 30px
+	background: #f3f3f3 
+	&__inner
+		max-width: 960px
+		margin: 0 auto
+	.video-wrap
+		max-width: 960px

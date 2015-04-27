@@ -95,7 +95,7 @@ head.ready(function() {
 	//posts
 	
 
-	$('.post__info p').click(function(event){
+	$('.post__info').click(function(event){
 
 		if($(event.target).closest('a').length){
 	  
@@ -140,5 +140,13 @@ head.ready(function() {
 		changeYear: true,
 		changeMonth: true,
 		dateFormat: "dd.mm.y"
+	});
+
+	//slider
+	$('.js-slider').slick({
+		infinite: true,
+		arrows: true,
+		dots: false,
+		adaptiveHeight: true
 	});
 });
