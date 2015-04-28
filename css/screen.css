@@ -146,6 +146,8 @@ body.is-big .post__inner, body.is-big .banner__info { max-width: 940px; }
 .btn-nav i:before, .btn-nav i:after { content: ""; position: absolute; width: 100%; height: 4px; background: #d1d1d1; left: 0; }
 .btn-nav i:before { top: -10px; }
 .btn-nav i:after { bottom: -10px; }
+.btn-nav.is-active i { background: #00baff; }
+.btn-nav.is-active i:before, .btn-nav.is-active i:after { background: #00baff; }
 
 .nav { float: right; font-size: 0; padding: 28px 0 0 30px; display: block; }
 @media only screen and (max-width: 1360px) { .nav { display: none; position: absolute; top: 100%; right: -10px; padding: 10px 0; border: 1px solid #ededed; background: white; margin-top: -25px; z-index: 100; text-align: left; } }

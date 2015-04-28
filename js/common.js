@@ -40,6 +40,7 @@ head.ready(function() {
 	//nav
 	$('.js-nav-btn').on('click', function() {
 		$('.js-nav').toggleClass('is-active');
+		$(this).toggleClass('is-active');
 		return false;
 	});
 	// $(window).resize(function() {
