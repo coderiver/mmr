@@ -881,7 +881,7 @@ body
 		width: 100%
 		+box
 		+r(640)
-			padding: 8px
+			padding: 9px
 			font-size: 9px 
 	&__btn
 		width: 100%
@@ -1273,3 +1273,40 @@ body
 		.info__icon
 			&:after
 				vertical-align: middle
+				
+.result
+	max-width: 622px
+	margin: 0 auto
+	padding: 30px 25px 20px
+	+r(640)
+		padding: 15px 12px
+	p, .tags
+		display: inline-block
+		vertical-align: top
+	p
+		+bold
+		font-size: 20px
+		line-height: 35px
+		margin: 0 7px 7px 0 
+	.tags
+		margin: 0
+		a
+			&:before
+				display: none
+				
+.form-share
+	overflow: hidden
+	font-size: 0
+	+r(640)
+		clear: both
+		margin: 0 -5px
+	&__box
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		padding: 0 10px 10px 
+		+box
+		+r(980)
+			padding: 10px
+		+r(640)
+			padding: 0 5px 10px 

@@ -314,7 +314,7 @@ body.is-profile .banner_big .banner__info { max-width: 940px; }
 .share__right form { max-width: 460px; display: inline-block; width: 100%; }
 .share__box { display: inline-block; vertical-align: top; width: 50%; padding: 0 20px 0 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 270px; }
 .share__input { background-color: white; border: 1px solid #cacaca; color: #cacaca; font-family: "HelveticaNeue Roman", Helvetica, sans-serif; font-size: 14px; padding: 11px; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-@media only screen and (max-width: 640px) { .share__input { padding: 8px; font-size: 9px; } }
+@media only screen and (max-width: 640px) { .share__input { padding: 9px; font-size: 9px; } }
 .share__btn { width: 100%; background: #18c5fe; padding: 12px; font-family: "HelveticaNeue Roman", Helvetica, sans-serif; font-size: 14px; text-transform: uppercase; color: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; cursor: pointer; position: relative; }
 @media only screen and (max-width: 640px) { .share__btn { padding: 10px; font-size: 9px; } }
 .share__btn:active { top: 1px; }
@@ -440,6 +440,19 @@ body.is-profile .banner_big .banner__info { max-width: 940px; }
 .info p a { color: #00baff; font-family: "HelveticaNeue Italic", Helvetica, sans-serif; }
 .info.is-middle .info__icon, .info.is-middle .info__text { vertical-align: middle; }
 .info.is-middle .info__icon:after { vertical-align: middle; }
+
+.result { max-width: 622px; margin: 0 auto; padding: 30px 25px 20px; }
+@media only screen and (max-width: 640px) { .result { padding: 15px 12px; } }
+.result p, .result .tags { display: inline-block; vertical-align: top; }
+.result p { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 20px; line-height: 35px; margin: 0 7px 7px 0; }
+.result .tags { margin: 0; }
+.result .tags a:before { display: none; }
+
+.form-share { overflow: hidden; font-size: 0; }
+@media only screen and (max-width: 640px) { .form-share { clear: both; margin: 0 -5px; } }
+.form-share__box { display: inline-block; vertical-align: top; width: 50%; padding: 0 10px 10px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+@media only screen and (max-width: 980px) { .form-share__box { padding: 10px; } }
+@media only screen and (max-width: 640px) { .form-share__box { padding: 0 5px 10px; } }
 
 .chosen-container { position: relative; display: inline-block; vertical-align: middle; font-size: 13px; zoom: 1; -webkit-user-select: none; -moz-user-select: none; user-select: none; width: 100%; text-align: left; }
 .chosen-container * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
