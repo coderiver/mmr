@@ -154,8 +154,7 @@ head.ready(function() {
 				settings: {
 					// appendArrows: '.slider__btns'
 					arrows: false,
-					slidesToShow: 1.5,
-					slidesToScroll: 1
+					dots: true
 				}
 			}
 		]
@@ -178,8 +177,8 @@ head.ready(function() {
 			$(this).parents('.js-search').find('.js-search-input').val($(this).text());
 			$('.js-search-drop').removeClass('is-active');
 		});
-	});
-	$('body').on('click', function(event) {		
-		$('.js-search-drop').removeClass('is-active');
+		$('body').on('click', function(event) {		
+			$('.js-search-drop').removeClass('is-active');
+		});
 	});
 });

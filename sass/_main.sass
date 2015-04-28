@@ -12,7 +12,7 @@ body
 	+r(640)
 		padding: 47px 0 0 
 	&_header
-		padding: 132px 0 0 
+		padding: 130px 0 0 
 		+r(980)
 			padding: 205px 0 0  
 		+r(640)
@@ -75,6 +75,7 @@ body
 			display: none
 	&__right
 		float: right
+		position: relative
 		+r(980)
 			float: none
 			display: inline-block
@@ -83,6 +84,7 @@ body
 			width: 0
 			height: 0
 			float: right
+			position: static
 .logo
 	width: 32%
 	max-width: 300px*0.70
@@ -340,13 +342,56 @@ body
 	display: block
 	+r(1360)
 		display: none
+		position: absolute
+		top: 100%
+		right: -10px
+		padding: 10px 0 
+		border: 1px solid #ededed
+		background: #fff 
+		margin-top: -25px
+		z-index: 100 
+		text-align: left
+		+r(640)
+			right: auto
+			left: 2px
+			margin: 10px 0 0
+	&.is-active
+		display: block
+	&:before, &:after
+		content: "" 
+		position: absolute
+		bottom: 100%
+	&:before
+		right: 13px
+		+arr(22, 11, #ededed, t)
+		+r(640)
+			right: auto
+			left: 13px
+	&:after
+		right: 15px
+		+arr(18, 9, #fff, t)
+		+r(640)
+			right: auto
+			left: 15px
+	ul
+		&:before
+			content: "Меню"
+			padding: 0 20px 6px
+			+bold
+			font-size: 18px
+			line-height: 30px
+			color: #494949
+			text-transform: uppercase  
+			display: none
+			+r(1360)
+				display: block
 	li
 		display: inline-block
 		vertical-align: top
 		margin: 0 0 0 22px 
 		+r(1360)
 			display: block
-			margin: 0 0 10px
+			margin: 0 
 	a
 		+bold
 		font-size: 14px
@@ -356,11 +401,16 @@ body
 		text-transform: uppercase
 		+text-shadow(0.5px 0.9px 0 rgba(255, 255, 255, 0.7))
 		+r(1360)
-			color: #fff 
 			+text-shadow(none)
+			padding: 0 20px
+			line-height: 40px 
+			+opacity(1)
+			display: block
 		&:hover
 			+opacity(1)
-		 
+			+r(1360)
+				background: #00baff
+				color: #fff  
 .sticker
 	max-width: 940px
 	margin: 0 auto
@@ -673,71 +723,35 @@ body
 	max-width: 940px
 	margin: 0 auto
 	position: relative
-	&_mb
-		margin-bottom: 40px
-		+r(640)
-			margin-bottom: 20px
 	h3
 		color: #000 
 		width: 80%
-		padding: 20px 12px 
+		padding: 20px 0px 
+		+r(640)
+			padding: 20px 12px 
+			width: 100%
 	h2
 		color: #141414
-		padding: 20px 25px
+		padding: 20px 0px
 		width: 80%
 		+r(640)
 			padding: 20px 12px 
 			width: 90%
 .video-text
-	padding: 45px 27px
+	padding: 20px 0
+	+r(980)
+		padding: 20px 25px 
 	+r(640)
-		padding: 25px 12px 
+		padding: 20px 12px 
 	p
 		+reg
-		font-size: 23px
+		font-size: 20px
 		color: #323232
 		letter-spacing: -0.025em  
-		line-height: 1.2
+		line-height: 1.3
 		+r(640)
-			font-size: 11.5px
-.nav-mob
-	display: none
-	position: absolute
-	top: 100%
-	right: 0
-	+transition(left 0.4s, right 0.4s)
-	background: rgba(0,0,0,.8) 
-	padding: 20px 
-	width: 210px
-	text-align: right
-	+box
-	z-index: 100 
-	+r(1360)
-		display: block
-		right: -210px
-	+r(980)
-		right: auto
-		left: -210px
-		text-align: left
-	&.is-active
-		display: block
-		+r(1360)
-			right: 0
-		+r(980)
-			left: 0
-	a
-		+bold
-		font-size: 14px
-		line-height: 1
-		color: #494949
-		+opacity(0.8)
-		text-transform: uppercase
-		+text-shadow(0.5px 0.9px 0 rgba(255, 255, 255, 0.7))
-		+r(1360)
-			color: #fff 
-			+text-shadow(none)
-		&:hover
-			+opacity(1)
+			font-size: 10px
+
 
 .more
 	.arr-bot
@@ -787,20 +801,20 @@ body
 			font-size: 11.5px
 			
 .share
-	padding: 30px 5px 16px
+	padding: 21px 5px 23px
 	max-width: 930px
 	margin: 0 auto
 	background: #f3f3f3 
 	&__social
 		float: left
 		font-size: 0
-		max-width: 462px
+		max-width: 325px
 		width: 100%
-		padding: 5px 0 4px 
+		padding: 9px 0 0 
 		li
 			display: inline-block
 			vertical-align: top
-			margin: 0 12px 12px
+			margin: 0 5px 7px
 		a
 			display: block
 			&.is-fb
@@ -812,63 +826,68 @@ body
 			&.is-ok
 				+s(s-ok)
 	&__right
-		padding: 0 18px 12px
+		padding: 0 5px 
 		overflow: hidden
 		color: #242424
-		+r(980)
+		text-align: right
+		font-size: 0
+		+r(780)
 			clear: both
-			padding: 0 12px 12px 
+			padding: 0 5px
+			text-align: left
 		h5, p
-			display: inline 
+			display: inline-block
+			line-height: 24px
+			padding: 9px 0 7px 
 		h5
 			+bold
+			font-size: 14px
+			+r(640)
+				font-size: 7px
+		p
+			+reg
 			font-size: 18px
 			+r(640)
 				font-size: 9px
-		p
-			+reg
-			font-size: 21px
-			+r(640)
-				font-size: 10.5px
-		div
-			display: block
-			+clr
-			span
-				+bold
-				font-size: 18px
-				text-transform: uppercase
-				float: left
-				padding: 8px 19px 5px 0 
-				+r(640)
-					font-size: 9px
-					padding: 6px 10px 5px 0 
-			label
-				overflow: hidden
-				display: block
-				position: relative
-				&:before
-					content: "" 
-					position: absolute
-					top: 50%
-					left: 16px
-					margin-top: -11px
-					+svg(mail, 32, 22)
-					+r(640)
-						+svg(mail, 16, 11)
-						margin-top: -6px
+		form
+			max-width: 460px
+			display: inline-block
+			width: 100%
+	&__box
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		padding: 0 20px 0 0 
+		+box
+		max-width: 270px
 	&__input
 		background-color: #FFF
 		border: 1px solid #CACACA
 		color: #cacaca
 		+reg
-		font-size: 17px
-		padding: 10px 15px 9px 80px 
+		font-size: 14px
+		padding: 11px
 		width: 100%
 		+box
 		+r(640)
-			padding: 6px 8px 5px 40px
+			padding: 8px
 			font-size: 9px 
-			max-width: 300px
+	&__btn
+		width: 100%
+		background: #18c5fe		
+		padding: 12px
+		+reg
+		font-size: 14px
+		text-transform: uppercase
+		color: #fff
+		+box
+		cursor: pointer 
+		position: relative
+		+r(640)
+			padding: 10px
+			font-size: 9px 
+		&:active
+			top: 1px
 .comment
 	padding: 35px 12px 40px
 	border-bottom: 1px solid #e9e9e9
@@ -890,18 +909,14 @@ body
 		p
 			+georgia
 			font-style: italic
-			font-size: 26px
-			line-height: 1.23
+			font-size: 20px
+			line-height: 1.3
 			color: #969696 
-			+r(980)
-				font-size: 26px*0.75
 			+r(640)
-				font-size: 13px
+				font-size: 10px
 .author
-	width: 140px*0.75
+	width: 140px
 	+clr
-	+r(980)
-		width: 140px*0.75 
 	+r(640)
 		width: 100%
 	&__img
@@ -923,27 +938,23 @@ body
 			font-style: italic
 			font-size: 18px
 			color: #00BAFF
-			+r(980)
-				font-size: 18px*0.75
 			+r(640)
 				font-size: 9px
 	&__title
 		+bold
 		color: #2E2E2E
-		font-size: 18px
+		font-size: 12px
 		text-transform: uppercase
 		display: block
-		+r(980)
-			font-size: 18px*0.75
 		+r(640)
-			font-size: 9px
+			font-size: 6px
 		
 .box
 	&__inner
 		+clr
 		max-width: 940px
 		margin: 0 auto
-		padding: 45px 0 15px 
+		padding: 25px 0 15px 
 		+r(640)
 			padding: 25px 0 5px 
 	&__right
@@ -960,24 +971,22 @@ body
 			max-width: 100%
 	&__text
 		overflow: hidden
-		padding: 0 25px 
+		padding: 0 0 
+		+r(980)
+			padding: 0 25px 
 		+r(640)
 			padding: 0 12px 
 		p, h4
-			font-size: 26px
-			+r(980)
-				font-size: 26px*0.75
+			font-size: 20px
+			line-height: 1.3
 			+r(640)
-				font-size: 13px
+				font-size: 10px
 		h4
 			+bold
 			color: #000
-			line-height: 1.34
-			margin-bottom: 5px
 		p
 			+georgia
 			color: #494949
-			line-height: 1.35
 			margin-bottom: 55px
 			+r(640)
 				margin-bottom: 30px
@@ -1016,45 +1025,46 @@ body
 		padding: 20px 12px
 	&:before
 		content: "" 
-		+svg(quote, 93, 67)
+		+svg(quote, 70, 56)
 		display: block
 		margin: 0 auto 20px
 		+r(640)
-			+svg(quote, 46, 33)
+			+svg(quote, 35, 28)
 			margin: 0 auto 10px
 			display: block 
 	blockquote
 		margin: 0
 		padding: 0
 		display: inline-block
-		font-size: 36px
-		line-height: 1.66
+		font-size: 25px
+		line-height: 1.28
 		color: #2e2e2e
-		+med
-		max-width: 599px
+		+georgia
+		font-style: italic
+		max-width: 620px
 		+r(640)
-			font-size: 18px 
+			font-size: 13px 
 	&__author
 		text-align: center
 		padding: 30px 0
 		+r(640)
 			padding: 15px 0 
 		span
-			+georgia
-			font-style: italic
-			font-size: 24px
+			+med
+			font-size: 18px
 			color: #2E2E2E
 			display: block
 			+r(640)
-				font-size: 12px
+				font-size: 9px
 	&__img
-		width: 169px
+		width: 150px
+		height: 150px
 		+border-radius(50%)
 		overflow: hidden
-		margin: 0 auto 40px
+		margin: 0 auto 20px
 		+r(640)
-			width: 85px
-			margin-bottom: 20px
+			width: 75px
+			margin-bottom: 10px
 		img
 			width: 100%
 .text	
@@ -1069,34 +1079,30 @@ body
 			padding: 0 12px 0
 	&_mod
 		background: #f3f3f3
-		padding-bottom: 35px
+	p, h4, b
+		font-size: 20px
+		line-height: 1.3
 		+r(640)
-			padding-bottom: 25px
-	p, h4
-		font-size: 26px
-		max-width: 880px
-		+r(980)
-			font-size: 26px*0.75
-		+r(640)
-			font-size: 13px
+			font-size: 10px
 	h4
 		+bold
 		color: #000
-		line-height: 1.34
 		margin-bottom: 5px
 	p
 		+georgia
 		color: #494949
-		line-height: 1.35
-		b
-			+bold
+		display: inline
 		a
 			color: #00c0ff 
+	b
+		+bold
+		color: #000000 
+		display: inline
 	time
 		+reg
 		font-size: 18px
 		color: #949494
-		padding: 10px 0 7px 
+		padding: 5px 0 7px 
 		display: block
 		+r(980)
 			font-size: 20px
@@ -1107,10 +1113,10 @@ body
 	margin: 50px 0 30px
 	background: #f3f3f3 
 	&__inner
-		max-width: 960px
+		max-width: 940px
 		margin: 0 auto
+		padding: 10px 0  
 	.video-wrap
-		max-width: 960px
 		+r(1110)
 			padding-right: 5px
 			padding-right: 5px  
@@ -1120,10 +1126,10 @@ body
 			position: static
 
 .slideshare
-	max-width: 960px
-	height: 800px
+	max-width: 940px
+	height: 770px
 	position: relative
-	margin: 0 auto 50px
+	margin: 0 auto 0
 	+r(980)
 		height: 600px
 		margin-bottom: 40px 
@@ -1134,44 +1140,6 @@ body
 		width: 100%
 		height: 100%
 
-.hashtags
-	border-top: 2px solid #dddddd
-	padding: 30px 25px
-	+r(640)
-		padding: 20px 12px 
-	ul
-		max-width: 960px
-		margin: 0 auto
-		font-size: 0
-		padding: 2px 0 0 46px
-		position: relative
-		+box
-		+r(640)
-			padding: 0 0 0 23px 
-		&:before
-			content: "" 
-			+svg(hashtags, 24, 24)
-			position: absolute
-			top: 0
-			left: 0
-			+r(640)
-				+svg(hashtags, 12, 12)
-		li
-			display: inline-block
-			vertical-align: top
-			margin: 0 18px 18px
-			+r(640)
-				margin: 0 9px 9px
-			a
-				+reg
-				font-size: 22px
-				line-height: 1
-				color: #5b5b5b
-				text-transform: uppercase
-				+r(640)
-					font-size: 11px
 
 .banners
-	padding: 65px 0 0 
-	.banner
-		margin-top: 5px
+	padding: 30px 0 0 
