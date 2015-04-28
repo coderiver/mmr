@@ -83,13 +83,15 @@ head.ready(function() {
 			}
 		}
 		else {
-			if(getScrollTop() > 10) {
-				$('.js-header').addClass('is-full');
-				$('.js-header').removeClass('is-hidden');
-			}
-			else {
-				$('.js-header').removeClass('is-hidden');
-			}
+			if (scrollTop - scrollNow > 50) {				
+				if(getScrollTop() > 10) {
+					$('.js-header').addClass('is-full');
+					$('.js-header').removeClass('is-hidden');
+				}
+				else {
+					$('.js-header').removeClass('is-hidden');
+				}
+			};
 		}
 		scrollTop = scrollNow;
 	});

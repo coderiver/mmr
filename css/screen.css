@@ -442,9 +442,10 @@ body.is-profile .banner_big .banner__info { max-width: 940px; }
 .info.is-middle .info__icon:after { vertical-align: middle; }
 
 .result { max-width: 622px; margin: 0 auto; padding: 30px 25px 20px; }
-@media only screen and (max-width: 640px) { .result { padding: 15px 12px; } }
+@media only screen and (max-width: 640px) { .result { padding: 15px 12px 10px; } }
 .result p, .result .tags { display: inline-block; vertical-align: top; }
 .result p { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 20px; line-height: 35px; margin: 0 7px 7px 0; }
+@media only screen and (max-width: 640px) { .result p { font-size: 10px; line-height: 17px; } }
 .result .tags { margin: 0; }
 .result .tags a:before { display: none; }
 
