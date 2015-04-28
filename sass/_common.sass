@@ -57,6 +57,7 @@ body
 +font("HelveticaNeue Medium", helveticaneuecyr-medium)
 +font("HelveticaNeue Roman", HelveticaNeueCyr-Reg)
 +font("HelveticaNeue Light", helveticaneuecyr-light)
++font("HelveticaNeue Italic", helveticaneuecyr-italic)
 
 //vars
 
@@ -68,6 +69,8 @@ body
 	font-family: "HelveticaNeue Roman", Helvetica, sans-serif 
 =light
 	font-family: "HelveticaNeue Light", Helvetica, sans-serif 
+=italic
+	font-family: "HelveticaNeue Italic", Helvetica, sans-serif 
 =georgia
 	font-family: Georgia, sans-serif 
 //reset
@@ -100,3 +103,22 @@ h3
 	margin: 0 auto 15px
 	+opacity(0.3)
 	clear: both
+
+.btn-simple
+	+reg
+	font-size: 18px
+	letter-spacing: -0.025em 
+	color: #fff
+	border: 1px solid #fff
+	background: none
+	text-transform: uppercase
+	+box
+	width: 100% 
+	padding: 14px
+	text-align: center
+	&:hover
+		border-color: #00baff
+		background: #00baff  
+	+r(640)
+		padding: 7px
+		font-size: 9px 
