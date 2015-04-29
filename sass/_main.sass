@@ -862,12 +862,36 @@ body
 			display: block
 			&.is-fb
 				+s(s-fb)
+				+r(640)
+					background-image: url(../img/icons/s-fb.png)
+					+cover
+					background-repeat: no-repeat
+					width: 71px*0.70
+					height: 24px*0.70
 			&.is-tw
 				+s(s-tw)
+				+r(640)
+					background-image: url(../img/icons/s-tw.png)
+					+cover
+					background-repeat: no-repeat
+					width: 71px*0.70
+					height: 24px*0.70
 			&.is-vk
 				+s(s-vk)
+				+r(640)
+					background-image: url(../img/icons/s-vk.png)
+					+cover
+					background-repeat: no-repeat
+					width: 71px*0.70
+					height: 24px*0.70
 			&.is-ok
 				+s(s-ok)
+				+r(640)
+					background-image: url(../img/icons/s-ok.png)
+					+cover
+					background-repeat: no-repeat
+					width: 71px*0.70
+					height: 24px*0.70
 	&__right
 		padding: 0 5px 
 		overflow: hidden
@@ -896,6 +920,10 @@ body
 			max-width: 460px
 			display: inline-block
 			width: 100%
+			.share__box
+				+r(640)
+					width: 50%
+					padding: 5px 0 0 
 	&__box
 		display: inline-block
 		vertical-align: top
@@ -903,6 +931,8 @@ body
 		padding: 0 20px 0 0 
 		+box
 		max-width: 270px
+		+r(640)
+			width: auto
 	&__input
 		background-color: #FFF
 		border: 1px solid #CACACA
