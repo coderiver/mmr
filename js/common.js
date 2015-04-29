@@ -140,6 +140,17 @@ head.ready(function() {
 		changeMonth: true,
 		dateFormat: "dd.mm.y"
 	});
+	$('.js-datepick').on('click', function() {
+		if($(this).hasClass('is-active')) {
+			$(this).datepicker('hide');
+			$(this).removeClass('is-active');
+		}
+		else {
+			$('.js-datepick').removeClass('is-active');
+			$(this).addClass('is-active');
+			$(this).datepicker('show');
+		};
+	});
 	$('.calendar').each(function() {
 		$('.js-show').datepicker({
 			inline: true,
