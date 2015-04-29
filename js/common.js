@@ -130,8 +130,8 @@ head.ready(function() {
 	prevText: '&#x3c;Пред', 
 	nextText: 'След&#x3e;', 
 	currentText: 'Сегодня', 
-	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 
-	'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'], 
+	monthNames: ['Января','Февраля','Марта','Апреля','Мая','Июня', 
+	'Июля','Августа','Сентября','Октября','Ноября','Декабря'], 
 	monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн', 
 	'Июл','Авг','Сен','Окт','Ноя','Дек'], 
 	dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'], 
@@ -148,7 +148,63 @@ head.ready(function() {
 		changeMonth: true,
 		dateFormat: "dd.mm.y"
 	});
+	$('.calendar').each(function() {
+		$('.js-show').datepicker({
+			inline: true,
+			changeYear: true,
+			changeMonth: true,
+			dateFormat: "dd MM yy",
+			onSelect: function(dateText) {
+				display(this.value);
+				date_heading(this.value);
+				$(this).change();
+			}
+		});
+		function display(msg) {
+			$(".calendar p").remove();
+			$("<p>").html(msg).appendTo($('.calendar__event'));
+		};
+		function date_heading(msg) {
+			$(".calendar__title h3 span").remove();
+			$(".calendar__title").removeClass('is-active');
+			$("<span>").html(msg).appendTo($('.calendar__title h3'));
+			$(".calend__date h3").text($('.calendar__title h3 span').text());
+		};
+		$('.js-close').on('click', function() {
+			$(this).parents('.calendar__title').addClass('is-active');
+		});
+	});
+	$('.calendar').on('click', function() {
+		event.stopPropagation();
+	});
+	$('body').on('click', function(event) {
+		$('.js-calendar').removeClass('is-active');
+	});
+	$('.js-calendar-open').on('click', function() {
+		$('.js-calendar').toggleClass('is-active');
+		event.stopPropagation();
+	});
 
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth(); //January is 0!
+	var yyyy = today.getFullYear();
+	var month=new Array(12);
+		month[0]="Января";
+		month[1]="Февраля";
+		month[2]="Марта";
+		month[3]="Апреля";
+		month[4]="Мая";
+		month[5]="Июня";
+		month[6]="Июля";
+		month[7]="Августа";
+		month[8]="Сентября";
+		month[9]="Октября";
+		month[10]="Ноября";
+		month[11]="Декабря";
+	var today_date = dd + ' ' + month[mm] + ' ' + yyyy;
+	$('.js-calendar-open').text(today_date);
+	$('.calendar__title h3 span').text(today_date);
 	//slider
 	$('.js-slider').slick({
 		infinite: true,

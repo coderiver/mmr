@@ -69,3 +69,11 @@
 					&:hover
 						background: #18c5fe
 						color: #fff  
+	.ui-state-active
+		position: relative
+		&:after
+			content: "" 
+			position: absolute
+			top: 0
+			right: 0
+			+arr(9, 9, #18c5fe, tr)

@@ -6,6 +6,64 @@ body
 		.banner_big
 			.banner__info
 				max-width: 940px
+	&.page-error
+		height: 100%
+		min-height: 500px 
+		+r(640)
+			min-height: 300px 
+		.out
+			height: 100%
+			+box
+			.main
+				height: 100% 
+				background: url(../img/404.jpg) no-repeat 
+				+cover
+				+vertical
+				position: relative
+				&:after
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 0
+					right: 0
+					content: "" 
+					background: #000
+					+opacity(0.3) 
+					z-index: 1 
+			.header
+				&.is-hidden
+					-webkit-transform: translateY(0) 
+					-moz-transform: translateY(0) 
+					-ms-transform: translateY(0) 
+					-o-transform: translateY(0) 
+					transform: translateY(0) 
+.error
+	max-width: 960px
+	margin: 0 auto
+	display: inline-block
+	width: 100%
+	vertical-align: middle
+	color: #fff 
+	text-align: left
+	padding: 0 12px 
+	+box
+	position: relative
+	z-index: 2 
+	&__title
+		+bold
+		font-size: 121.88px
+		letter-spacing: -0.025em 
+		display: block
+		+r(640)
+			font-size: 60px
+	p
+		+georgia
+		font-style: italic
+		font-size: 23px
+		letter-spacing: -0.025em 
+		max-width: 475px
+		+r(640)
+			font-size: 12px
 .out
 	min-width: 320px 
 	margin: 0 auto
@@ -18,7 +76,7 @@ body
 	&_header
 		padding: 130px 0 0 
 		+r(980)
-			padding: 205px 0 0  
+			padding: 203px 0 0  
 		+r(640)
 			padding: 45px 0 0  
 		.header
@@ -45,7 +103,7 @@ body
 	right: 0
 	background: #fff
 	z-index: 500 
-	+transition(all 0.6s)
+	+transition(transform 0.6s)
 	+box
 	-webkit-transform: translateY(0) 
 	-moz-transform: translateY(0) 
@@ -670,6 +728,8 @@ body
 		+r(640)
 			margin: 0 -5px 
 			padding: 0 
+	.more
+		padding-bottom: 20px
 .social
 	font-size: 0
 	li
@@ -1306,6 +1366,27 @@ body
 					+svg(is-star, 41, 39)
 					+r(640)
 						+svg(is-star, 20, 19)
+		&.is-dollar
+			i
+				&:after
+					+svg(is-dollar, 48, 48)
+					+r(640)
+						+svg(is-dollar, 24, 24)
+		&.is-calendar
+			i
+				&:after
+					+svg(is-calendar, 45, 48)
+					+r(640)
+						+svg(is-calendar, 22, 24)
+		&.is-clip
+			i
+				&:after
+					+svg(is-clip, 48, 48)
+					+r(640)
+						+svg(is-clip, 24, 24)
+			p
+				a
+					+reg
 	&__icon
 		width: 60px
 		height: 70px
@@ -1380,3 +1461,195 @@ body
 			padding: 10px
 		+r(640)
 			padding: 0 5px 10px 
+			
+.calend
+	position: relative
+	+cover
+	background-repeat: no-repeat
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		background: #000
+		+opacity(0.3)
+	&__inner
+		height: 475px
+		position: relative
+		max-width: 940px
+		margin: 0 auto
+	&__info
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		color: #fff
+		padding: 0 12px 15px
+	&__title
+		+med
+		font-size: 45px
+		letter-spacing: -0.025em 
+		max-width: 300px
+		display: block
+		+r(640)
+			font-size: 22px
+			max-width: 150px
+	p
+		+light
+		font-size: 18px
+		letter-spacing: -0.025em 
+		width: 90%
+		+r(640)
+			font-size: 9px
+	&__bottom
+		position: relative
+		background: #33cdf5
+		text-align: center
+		a
+			display: block
+			padding: 12px 12px 13px
+			+r(640)
+				padding: 6px 12px 7px 
+		span
+			display: inline-block
+			position: relative
+			font-size: 18px
+			+georgia
+			font-style: italic
+			color: #fff
+			letter-spacing: -0.025em 
+			+r(640)
+				font-size: 9px
+			i
+				position: relative
+				top: 0
+				right: 0
+				border: 1px solid #fff
+				+border-radius(50%)
+				width: 25px
+				height: 25px
+				+box
+				margin: 0 0 0 10px
+				display: inline-block
+				vertical-align: top 
+				+r(640)
+					width: 13px
+					height: 13px
+					margin: 0 0 0 5px 
+				&:before
+					content: ""
+					position: absolute
+					top: 6px
+					left: 9px
+					+s(is-w-arr)
+					+r(640)
+						width: 3px
+						height: 5px
+						background: url(../img/icons/is-w-arr.png) no-repeat
+						+cover
+						top: 3px
+						left: 4px
+	&__date
+		position: absolute
+		top: 41px
+		right: 0
+		text-align: center
+		width: 100%
+		max-width: 350px
+		+r(640)
+			font-size: 15px
+			top: 27px
+			max-width: 280px
+		h3
+			+reg
+			font-size: 29px
+			letter-spacing: -0.025em 
+			color: #fff
+			text-transform: uppercase
+			padding: 0 25px 0 0
+			cursor: pointer
+			display: inline-block
+			position: relative
+			+r(640)
+				font-size: 15px
+				padding: 0 15px 0 0 
+			&:before
+				content: "" 
+				position: absolute
+				right: 0
+				top: 50%
+				+arr(19, 9, #fff, b)
+				margin-top: -4px
+				+r(640)
+					+arr(10, 5, #fff, b)
+					margin-top: -3px
+.calendar
+	position: absolute
+	top: 0
+	right: 0
+	z-index: 5
+	width: 100% 
+	max-width: 350px
+	border: 1px solid #ededed
+	background: #fff
+	padding: 19px 10px 15px
+	+box
+	+box-shadow(0 0px 10px 0px rgba(0, 0, 0, 0.1)) 
+	display: none
+	+r(640)
+		max-width: 280px
+		padding: 0 10px 15px 
+	&.is-active
+		display: block
+	.ui-datepicker
+		+box-shadow(none)
+		border: none
+	&__title
+		position: absolute
+		top: 30px
+		left: 0
+		right: 0
+		background: #fff
+		z-index: 10 
+		padding: 10px 10px 
+		text-align: center
+		+r(640)
+			padding: 20px 10px 
+			top: 10px 
+		&.is-active
+			visibility: hidden
+			+opacity(0)
+	h3		
+		+reg
+		font-size: 29px
+		letter-spacing: -0.025em 
+		color: #18c5fe 
+		display: inline-block
+		position: relative
+		padding: 0 25px 0 0
+		text-transform: uppercase
+		+r(640)
+			font-size: 15px
+			padding: 0 15px 0 0 
+		i
+			position: absolute
+			top: 50%
+			right: 0
+			margin-top: -7px
+			+svg(calendar-close, 14, 14)
+			cursor: pointer
+			+r(640)
+				+svg(calendar-close, 9, 9)
+				margin-top: -5px 
+	&__event
+		padding: 0 20px
+		p
+			+italic
+			font-size: 13.89px
+			color: #626262
+			line-height: 1.2
+			border: 1px solid #dddddd
+			margin: 0 0 7px
+			padding: 8px   
