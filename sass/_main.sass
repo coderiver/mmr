@@ -57,12 +57,22 @@ body
 		height: 165px
 	+r(640)
 		height: 45px 
+	&:after
+		position: absolute
+		top: 100%
+		height: 20px
+		left: 0
+		right: 0
+		content: "" 
+		display: none
 	&.is-hidden
 		-webkit-transform: translateY(-100%) 
 		-moz-transform: translateY(-100%) 
 		-ms-transform: translateY(-100%) 
 		-o-transform: translateY(-100%) 
 		transform: translateY(-100%) 
+		&:after
+			display: block
 	.inner
 		max-width: 1400px
 		padding: 20px 24px 
@@ -638,6 +648,28 @@ body
 			text-transform: uppercase 
 			+r(640)
 				font-size: 10px
+	h5
+		+bold
+		font-size: 20px
+		text-transform: uppercase
+		color: #000
+		float: left
+		margin: 0 10px 0 0 
+		padding: 6px 0 0
+		+r(980)
+			font-size: 16px
+			padding: 20px 0 0 
+		+r(640)
+			font-size: 10px
+			padding: 0 
+			float: none
+	.form-share
+		clear: both
+		margin: 0 -10px
+		padding: 10px 0 0  
+		+r(640)
+			margin: 0 -5px 
+			padding: 0 
 .social
 	font-size: 0
 	li
@@ -967,7 +999,7 @@ body
 		margin: 0 auto
 		padding: 25px 0 15px 
 		+r(640)
-			padding: 25px 0 5px 
+			padding: 15px 0 5px 
 	&__right
 		float: right
 		font-size: 0
@@ -1004,6 +1036,8 @@ body
 .image
 	font-size: 0
 	margin-bottom: 20px
+	+r(640)
+		margin-bottom: 10px
 	img
 		width: 100%
 		display: block
@@ -1033,7 +1067,7 @@ body
 	margin: 0 auto 
 	padding: 20px 12px
 	+r(640)
-		padding: 20px 12px
+		padding: 10px 12px
 	&:before
 		content: "" 
 		+svg(quote, 70, 56)
@@ -1075,6 +1109,7 @@ body
 		margin: 0 auto 20px
 		+r(640)
 			width: 75px
+			height: 75px
 			margin-bottom: 10px
 		img
 			width: 100%
@@ -1123,6 +1158,8 @@ body
 .slider
 	margin: 50px 0 30px
 	background: #f3f3f3 
+	+r(640)
+		margin: 25px 0 15px 
 	&__inner
 		max-width: 940px
 		margin: 0 auto
@@ -1146,7 +1183,7 @@ body
 		margin-bottom: 40px 
 	+r(640)
 		height: 320px 
-		margin-bottom: 25px
+		margin-bottom: 20px
 	iframe
 		width: 100%
 		height: 100%

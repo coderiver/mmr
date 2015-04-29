@@ -95,6 +95,10 @@ head.ready(function() {
 		}
 		scrollTop = scrollNow;
 	});
+
+	$('.header').mouseenter(function() {
+		$('.js-header').removeClass('is-hidden');		
+	});
 	//posts
 	
 
