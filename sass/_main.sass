@@ -719,8 +719,7 @@ body
 			padding: 20px 0 0 
 		+r(640)
 			font-size: 10px
-			padding: 0 
-			float: none
+			padding: 11px 0 0
 	.form-share
 		clear: both
 		margin: 0 -10px
@@ -908,12 +907,17 @@ body
 	max-width: 930px
 	margin: 0 auto
 	background: #f3f3f3 
+	+r(640)
+		padding: 10px 5px 10px 
 	&__social
 		float: left
 		font-size: 0
 		max-width: 325px
 		width: 100%
 		padding: 9px 0 0 
+		+r(640)
+			max-width: 240px
+			padding: 0 
 		li
 			display: inline-block
 			vertical-align: top
@@ -958,14 +962,17 @@ body
 		color: #242424
 		text-align: right
 		font-size: 0
-		+r(780)
-			clear: both
+		+r(640)
 			padding: 0 5px
 			text-align: left
+			clear: both
 		h5, p
 			display: inline-block
 			line-height: 24px
 			padding: 9px 0 7px 
+			+r(640)
+				line-height: 18px
+				padding: 0 
 		h5
 			+bold
 			font-size: 14px
@@ -976,14 +983,16 @@ body
 			font-size: 18px
 			+r(640)
 				font-size: 9px
-		form
-			max-width: 460px
-			display: inline-block
-			width: 100%
-			.share__box
-				+r(640)
-					width: 50%
-					padding: 5px 0 0 
+	form
+		max-width: 460px
+		display: inline-block
+		width: 100%
+		+r(640)
+			margin: 0 -5px 
+		.share__box
+			+r(640)
+				width: 50%
+				padding: 5px 5px 0 
 	&__box
 		display: inline-block
 		vertical-align: top
@@ -1021,6 +1030,12 @@ body
 			font-size: 9px 
 		&:active
 			top: 1px
+	&__form
+		overflow: hidden		
+		padding: 0 5px 
+		font-size: 0
+		+r(780)
+			clear: both
 .comment
 	padding: 35px 12px 40px
 	border-bottom: 1px solid #e9e9e9
@@ -1607,17 +1622,13 @@ body
 		+box-shadow(none)
 		border: none
 	&__title
-		position: absolute
-		top: 30px
-		left: 0
-		right: 0
+		position: relative
 		background: #fff
 		z-index: 10 
 		padding: 10px 10px 
 		text-align: center
 		+r(640)
 			padding: 20px 10px 
-			top: 10px 
 		&.is-active
 			visibility: hidden
 			+opacity(0)

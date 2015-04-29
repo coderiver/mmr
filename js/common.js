@@ -43,22 +43,6 @@ head.ready(function() {
 		$(this).toggleClass('is-active');
 		return false;
 	});
-	// $(window).resize(function() {
-	// 	if ($('.out').width() < 1360) {
-	// 		$('.js-nav-list').appendTo('.header');
-	// 	};
-	// 	if ($('.out').width() > 1360) {
-	// 		$('.js-nav-list').appendTo('.js-nav');
-	// 	};
-	// });
-	// $(window).load(function() {
-	// 	if ($('.out').width() < 1360) {
-	// 		$('.js-nav-list').appendTo('.header');
-	// 	};
-	// 	if ($('.out').width() > 1360) {
-	// 		$('.js-nav-list').appendTo('.js-nav');
-	// 	};
-	// });
 	function getScrollTop(){
 		if(typeof pageYOffset!= 'undefined'){
 			return pageYOffset;
@@ -94,6 +78,9 @@ head.ready(function() {
 			};
 		}
 		scrollTop = scrollNow;
+		if (getScrollTop() < $('.main').offset().top) {
+			$('.js-header').removeClass('is-hidden');
+		};
 	});
 
 	$('.header').mouseenter(function() {
@@ -103,14 +90,19 @@ head.ready(function() {
 	
 
 	$('.post__info').click(function(event){
+		if ($(this).parents('.post').hasClass('is-active')) {
 
-		if($(event.target).closest('a').length){
-	  
 		}
-		else{
-		$(this).parents('.post').find('.post__bottom').slideToggle('fast');
-		}
+		else {
+			if($(event.target).closest('a').length){
+			 
+			}
+			else{
+				$(this).parents('.post').find('.post__bottom').slideToggle('fast');
+			};
+		};	
 	});
+
 	//chosen
 	var config = {
 	  '.chosen-select'           : {},
@@ -171,7 +163,7 @@ head.ready(function() {
 			$(".calend__date h3").text($('.calendar__title h3 span').text());
 		};
 		$('.js-close').on('click', function() {
-			$(this).parents('.calendar__title').addClass('is-active');
+			$(this).parents('.calendar').removeClass('is-active');
 		});
 	});
 	$('.calendar').on('click', function() {
