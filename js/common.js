@@ -81,6 +81,15 @@ head.ready(function() {
 		if (getScrollTop() < $('.main').offset().top) {
 			$('.js-header').removeClass('is-hidden');
 		};
+		if ($('.js-header').hasClass('is-hidden')) {
+			$('.js-search-drop ').removeClass('is-active');
+			$('.js-nav').removeClass('is-active');
+			$('.js-nav-btn').removeClass('is-active');
+			$('.chosen-container').removeClass('chosen-with-drop');
+			$('.chosen-container').removeClass('chosen-container-active');
+		}
+		else {
+		};
 	});
 
 	$('.header').mouseenter(function() {
