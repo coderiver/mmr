@@ -141,13 +141,13 @@ head.ready(function() {
 		dateFormat: "dd.mm.y"
 	});
 	$('.js-datepick').on('click', function() {
-		if($(this).hasClass('is-active')) {
+		if($(this).parents('label').hasClass('is-active')) {
 			$(this).datepicker('hide');
-			$(this).removeClass('is-active');
+			$(this).parents('label').removeClass('is-active');
 		}
 		else {
 			$('.js-datepick').removeClass('is-active');
-			$(this).addClass('is-active');
+			$(this).parents('label').addClass('is-active');
 			$(this).datepicker('show');
 		};
 	});
@@ -174,19 +174,20 @@ head.ready(function() {
 			$(".calend__date h3").text($('.calendar__title h3 span').text());
 		};
 		$('.js-close').on('click', function() {
-			$(this).parents('.calendar').removeClass('is-active');
+			$('.js-calendar').removeClass('is-active');
 		});
 	});
-	$('.calendar').on('click', function() {
+	$(document).on('click', function () {
+		$('.js-calendar').removeClass('is-active');		
+	});
+	$('.js-calendar-open').on('click', function(event) {		
+		event.stopPropagation();
+		$('.js-calendar').addClass('is-active');
+	});
+	$('.js-calendar').on('click', function(event) {		
 		event.stopPropagation();
 	});
-	$('body').on('click', function(event) {
-		$('.js-calendar').removeClass('is-active');
-	});
-	$('.js-calendar-open').on('click', function() {
-		$('.js-calendar').toggleClass('is-active');
-		event.stopPropagation();
-	});
+
 
 	var today = new Date();
 	var dd = today.getDate();
@@ -236,15 +237,15 @@ head.ready(function() {
 				$(this).parents('.js-search').find('.js-search-drop').addClass('is-active');
 			};
 		});
-		$('.js-search').on('click', function() {
-			event.stopPropagation();
-		});
 		$('.js-search-drop li').on('click', function() {
 			$(this).parents('.js-search').find('.js-search-input').val($(this).text());
 			$('.js-search-drop').removeClass('is-active');
 		});
-		$('body').on('click', function(event) {		
+		$(document).on('click', function() {
 			$('.js-search-drop').removeClass('is-active');
+		});
+		$('.js-search').on('click', function(event) {
+			event.stopPropagation();
 		});
 	});
 });

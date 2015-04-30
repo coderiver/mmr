@@ -18,6 +18,7 @@ body
 				height: 100% 
 				background: url(../img/404.jpg) no-repeat 
 				+cover
+				background-position: top center 
 				+vertical
 				position: relative
 				&:after
@@ -425,7 +426,7 @@ body
 		padding: 10px 0 
 		border: 1px solid #ededed
 		background: #fff 
-		margin-top: -25px
+		// margin-top: -25px
 		z-index: 100 
 		text-align: left
 		+r(640)
@@ -438,6 +439,9 @@ body
 		content: "" 
 		position: absolute
 		bottom: 100%
+		display: none
+		+r(1360)
+			display: block
 	&:before
 		right: 13px
 		+arr(22, 11, #ededed, t)
@@ -511,7 +515,7 @@ body
 		margin: 0 10px 10px 0
 		+r(640)
 			margin: 0 5px 5px 0 
-		a
+		a, span
 			padding: 9px 30px 8px 10px 
 			position: relative
 			+med
@@ -640,6 +644,8 @@ body
 			font-size: 20px
 		+r(640)
 			font-size: 9px
+		a
+			color: #949494
 	p
 		+georgia
 		color: #494949
@@ -1206,6 +1212,8 @@ body
 			display: block
 			+r(640)
 				font-size: 9px
+			a
+				color: #2E2E2E
 	&__img
 		width: 150px
 		height: 150px
@@ -1456,7 +1464,7 @@ body
 			line-height: 17px
 	.tags
 		margin: 0
-		a
+		a, span
 			&:before
 				display: none
 				
