@@ -540,6 +540,8 @@ body.page-error .out .header.is-hidden { -webkit-transform: translateY(0); -moz-
 .calendar__event { padding: 0 20px; }
 .calendar__event p { font-family: "HelveticaNeue Italic", Helvetica, sans-serif; font-size: 13.89px; color: #626262; line-height: 1.2; border: 1px solid #dddddd; margin: 0 0 7px; padding: 8px; }
 
+.chosen-select { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+
 .chosen-container { position: relative; display: inline-block; vertical-align: middle; font-size: 13px; zoom: 1; -webkit-user-select: none; -moz-user-select: none; user-select: none; width: 100% !important; text-align: left; }
 .chosen-container * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .chosen-container .chosen-drop { position: absolute; top: 100%; left: -9999px; z-index: 1010; width: 100%; padding: 6px 5px 2px 5px; border: 1px solid #18c5fe; background: white; margin-top: 7px; }
