@@ -152,7 +152,12 @@
 				&:before
 					+s(t-close-white)
 					+r(640)
+						width: 6.5px
+						height: 6.5px 
 						background: url(../img/icons/t-close.png) no-repeat
+						+cover
+						margin-top: -1px
+						right: 5px
 			&:before
 				content: "" 
 				position: absolute
@@ -166,7 +171,7 @@
 					height: 6.5px 
 					background: url(../img/icons/t-close.png) no-repeat
 					+cover
-					margin-top: -5px
+					margin-top: -1px
 					right: 5px
 		&.disabled-result
 			display: list-item
@@ -179,6 +184,12 @@
 				+s(t-close-white)
 				+r(640)
 					background: url(../img/icons/t-close.png) no-repeat
+					width: 6.5px
+					height: 6.5px 
+					background: url(../img/icons/t-close.png) no-repeat
+					+cover
+					margin-top: 0
+					right: 5px
 		&.no-results
 			color: #777
 			display: list-item
@@ -210,7 +221,7 @@
 		border: 1px solid #dddddd
 		white-space: nowrap
 		+r(640)
-			padding: 8px 30px 7px 7px
+			padding: 0 10px 0 
 			font-size: 11px 
 		&:focus, &.is-active
 			border-color: #18c5fe
@@ -221,6 +232,8 @@
 				padding: 1px 0 5px
 				white-space: nowrap
 				display: inline-block
+				+r(640)
+					padding: 1px 0 0 
 				input[type="text"]
 					margin: 1px 0
 					padding: 0
@@ -252,13 +265,19 @@
 					padding: 4.5px 15px 3px 5px
 					font-size: 8.5px
 					border-width: 1px 
+					margin: 0 5px 0 0 
 				&:hover
 					background: #18c5fe
 					color: #fff  
 					.search-choice-close
 						+s(t-close-white)
 						+r(640)
-							background: url(../img/icons/t-close.png) no-repeat				
+							width: 6.5px
+							height: 6.5px 
+							background: url(../img/icons/t-close.png) no-repeat
+							+cover
+							margin-top: 0
+							right: 5px			
 				span
 					word-wrap: break-word
 				.search-choice-close
@@ -273,7 +292,7 @@
 						height: 6.5px 
 						background: url(../img/icons/t-close.png) no-repeat
 						+cover
-						margin-top: -5px
+						margin-top: 0
 						right: 5px
 			&.search-choice-disabled
 				padding-right: 5px

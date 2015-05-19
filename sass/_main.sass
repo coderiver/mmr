@@ -146,6 +146,17 @@ body
 		padding: 15px 0 0
 		+r(640)
 			display: none
+			position: absolute
+			top: 100%
+			background: #fff
+			right: 0
+			left: 0
+			width: auto
+			padding: 15px 10px
+			text-align: left
+		&.is-active
+			+r(640)
+				display: block
 	&__right
 		float: right
 		position: relative

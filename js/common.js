@@ -257,4 +257,8 @@ head.ready(function() {
 			event.stopPropagation();
 		});
 	});
+
+	$('.js-search-btn').on('click', function () {
+		$('.js-search-block').toggleClass('is-active');
+	});
 });
