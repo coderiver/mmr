@@ -149,14 +149,18 @@ body
 			position: absolute
 			top: 100%
 			background: #fff
-			right: 0
-			left: 0
+			right: 10px
+			left: 10px
+			margin: 4px 0 0
 			width: auto
-			padding: 15px 10px
+			padding: 0
 			text-align: left
 		&.is-active
 			+r(640)
 				display: block
+		&__filter		
+			+r(640)
+				display: none
 	&__right
 		float: right
 		position: relative
@@ -200,6 +204,23 @@ body
 		padding: 20px 0 0 
 	&__inner
 		position: relative
+		&.is-active
+			&:before
+				+arr(12, 8, #18c5fe, t)
+		&:before, &:after
+			content: "" 
+			position: absolute
+			display: none
+			+r(640)
+				display: block
+		&:before
+			+arr(12, 8, #cacaca, t)
+			top: -7px
+			right: 5px
+		&:after
+			+arr(10, 7, #fff, t)
+			top: -6px
+			right: 6px
 	&__input
 		width: 100%
 		padding: 11px 40px 9px 20px
@@ -208,7 +229,7 @@ body
 		font-size: 16px
 		border: 1px solid #dddddd
 		+r(640)
-			padding: 8px 30px 7px 7px
+			padding: 11px 11px 9px 11px
 			font-size: 11px 
 		&:focus, &.is-active
 			border-color: #18c5fe
@@ -221,6 +242,9 @@ body
 		+r(980)
 			+svg(search, 17, 17)
 			margin-top: -8.5px 
+	&__btn
+		+r(640)
+			display: none
 	&__filter
 		font-size: 0
 		text-align: right
@@ -352,19 +376,28 @@ body
 			+bold
 			color: #a1b1b6 
 			padding: 0 20px 
+			+r(640)
+				padding: 0 11px 
 		p, li
 			font-size: 14.61px
 			margin-bottom: 1px
 			line-height: 25px
+			+r(640)
+				font-size: 10px
+				line-height: 1.66
 		li
 			color: #636363 
 			+reg
 			padding: 0 25px
 			cursor: pointer
+			+r(640)
+				padding: 0 16px 
 			&:hover
 				background-color: #EBFAFF
 		ul
 			padding: 0 0 15px
+			+r(640)
+				padding: 0 0 8px 
 	&__heading
 		+bold
 		font-size: 13px
@@ -374,6 +407,9 @@ body
 		padding: 5px 20px 
 		background: #ebfaff  
 		margin-bottom: 10px
+		+r(640)
+			font-size: 9px
+			padding: 3px 11px 
 .btn-search
 	position: absolute
 	top: 50%

@@ -92,8 +92,9 @@ body.page-error .out .header.is-hidden { -webkit-transform: translateY(0); -moz-
 @media only screen and (max-width: 980px) { .header .inner { padding: 20px 12px 20px; } }
 @media only screen and (max-width: 640px) { .header .inner { padding: 0 80px; } }
 .header .search { width: 492px; padding: 15px 0 0; }
-@media only screen and (max-width: 640px) { .header .search { display: none; position: absolute; top: 100%; background: white; right: 0; left: 0; width: auto; padding: 15px 10px; text-align: left; } }
+@media only screen and (max-width: 640px) { .header .search { display: none; position: absolute; top: 100%; background: white; right: 10px; left: 10px; margin: 4px 0 0; width: auto; padding: 0; text-align: left; } }
 @media only screen and (max-width: 640px) { .header .search.is-active { display: block; } }
+@media only screen and (max-width: 640px) { .header .search__filter { display: none; } }
 .header__right { float: right; position: relative; }
 @media only screen and (max-width: 980px) { .header__right { float: none; display: inline-block; vertical-align: top; } }
 @media only screen and (max-width: 640px) { .header__right { width: 0; height: 0; float: right; position: static; } }
@@ -110,11 +111,17 @@ body.page-error .out .header.is-hidden { -webkit-transform: translateY(0); -moz-
 .search:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 980px) { .search { padding: 20px 0 0; } }
 .search__inner { position: relative; }
+.search__inner.is-active:before { width: 0px; height: 0px; border-style: solid; border-width: 0 6px 8px 6px; border-color: transparent transparent #18c5fe transparent; }
+.search__inner:before, .search__inner:after { content: ""; position: absolute; display: none; }
+@media only screen and (max-width: 640px) { .search__inner:before, .search__inner:after { display: block; } }
+.search__inner:before { width: 0px; height: 0px; border-style: solid; border-width: 0 6px 8px 6px; border-color: transparent transparent #cacaca transparent; top: -7px; right: 5px; }
+.search__inner:after { width: 0px; height: 0px; border-style: solid; border-width: 0 5px 7px 5px; border-color: transparent transparent white transparent; top: -6px; right: 6px; }
 .search__input { width: 100%; padding: 11px 40px 9px 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "HelveticaNeue Roman", Helvetica, sans-serif; font-size: 16px; border: 1px solid #dddddd; }
-@media only screen and (max-width: 640px) { .search__input { padding: 8px 30px 7px 7px; font-size: 11px; } }
+@media only screen and (max-width: 640px) { .search__input { padding: 11px 11px 9px 11px; font-size: 11px; } }
 .search__input:focus, .search__input.is-active { border-color: #18c5fe; }
 .search__btn, .search .btn-search { position: absolute; top: 50%; right: 11px; margin-top: -9px; background: url("../img/svg/search.svg") no-repeat 0 0; -moz-background-size: 18px 18px; -o-background-size: 18px 18px; -webkit-background-size: 18px 18px; background-size: 18px 18px; width: 18px; height: 18px; display: inline-block; }
 @media only screen and (max-width: 980px) { .search__btn, .search .btn-search { background: url("../img/svg/search.svg") no-repeat 0 0; -moz-background-size: 17px 17px; -o-background-size: 17px 17px; -webkit-background-size: 17px 17px; background-size: 17px 17px; width: 17px; height: 17px; display: inline-block; margin-top: -8.5px; } }
+@media only screen and (max-width: 640px) { .search__btn { display: none; } }
 .search__filter { font-size: 0; text-align: right; padding: 17px 0 0; float: right; }
 @media only screen and (max-width: 980px) { .search__filter { width: 100%; float: none; text-align: justify; padding: 17px 0; } }
 .search__filter:after { content: ""; width: 100%; display: none; }
@@ -152,11 +159,16 @@ body.page-error .out .header.is-hidden { -webkit-transform: translateY(0); -moz-
 .search__drop { position: absolute; top: 100%; left: 0; right: 0; background: white; display: none; border: 1px solid #cacaca; border-top: none; }
 .search__drop.is-active { display: block; }
 .search__drop p { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; color: #a1b1b6; padding: 0 20px; }
+@media only screen and (max-width: 640px) { .search__drop p { padding: 0 11px; } }
 .search__drop p, .search__drop li { font-size: 14.61px; margin-bottom: 1px; line-height: 25px; }
+@media only screen and (max-width: 640px) { .search__drop p, .search__drop li { font-size: 10px; line-height: 1.66; } }
 .search__drop li { color: #636363; font-family: "HelveticaNeue Roman", Helvetica, sans-serif; padding: 0 25px; cursor: pointer; }
+@media only screen and (max-width: 640px) { .search__drop li { padding: 0 16px; } }
 .search__drop li:hover { background-color: #ebfaff; }
 .search__drop ul { padding: 0 0 15px; }
+@media only screen and (max-width: 640px) { .search__drop ul { padding: 0 0 8px; } }
 .search__heading { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; color: #a1b1b6; text-decoration: underline; display: block; padding: 5px 20px; background: #ebfaff; margin-bottom: 10px; }
+@media only screen and (max-width: 640px) { .search__heading { font-size: 9px; padding: 3px 11px; } }
 
 .btn-search { position: absolute; top: 50%; right: 12px; margin-top: -9px; background: url("../img/svg/search.svg") no-repeat 0 0; -moz-background-size: 18px 18px; -o-background-size: 18px 18px; -webkit-background-size: 18px 18px; background-size: 18px 18px; width: 18px; height: 18px; display: inline-block; display: none; }
 @media only screen and (max-width: 640px) { .btn-search { display: block; } }
