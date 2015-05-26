@@ -264,9 +264,13 @@ head.ready(function() {
 		$('.js-search').on('click', function(event) {
 			event.stopPropagation();
 		});
+		$('.js-search-btn').on('click', function(event) {
+			event.stopPropagation();
+		});
 	});
 
 	$('.js-search-btn').on('click', function () {
 		$('.js-search-block').toggleClass('is-active');
+		$('.js-search-drop').addClass('is-active');
 	});
 });
